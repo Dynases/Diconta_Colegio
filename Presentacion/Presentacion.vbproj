@@ -155,6 +155,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\F0_Migrar.Designer.vb">
+      <DependentUpon>F0_Migrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\F0_Migrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\UCImg.Designer.vb">
       <DependentUpon>UCImg.vb</DependentUpon>
     </Compile>
@@ -822,6 +828,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Control\F0_Migrar.resx">
+      <DependentUpon>F0_Migrar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\UCImg.resx">
       <DependentUpon>UCImg.vb</DependentUpon>
     </EmbeddedResource>

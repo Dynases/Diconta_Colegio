@@ -704,6 +704,8 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
 
 
+
+
     Public Shared Function L_prCuentaGetByNroCuenta(_cuenta As String, _numiEmp As String) As DataTable
         Dim _Tabla As DataTable
 
@@ -718,7 +720,35 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
+    Public Shared Function L_prCuentaGrabar2(ByRef _numi As String, _empresa As String, _cuenta As String, _desc As String, _nivel As String, _moneda As String, _tipo As String, _numiPadre As String) As Boolean
+        Dim _resultado As Boolean
 
+        Dim _Tabla As DataTable
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 1))
+        _listParam.Add(New Datos.DParametro("@caemp", _empresa))
+        _listParam.Add(New Datos.DParametro("@cacta", _cuenta))
+        _listParam.Add(New Datos.DParametro("@cadesc", _desc))
+        _listParam.Add(New Datos.DParametro("@caniv", _nivel))
+        _listParam.Add(New Datos.DParametro("@camon", _moneda))
+        _listParam.Add(New Datos.DParametro("@catipo", _tipo))
+        _listParam.Add(New Datos.DParametro("@capadre", _numiPadre))
+
+        _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
+
+        _Tabla = D_ProcedimientoConParam("sp_dg_TC001", _listParam)
+
+        If _Tabla.Rows.Count > 0 Then
+            _numi = _Tabla.Rows(0).Item(0)
+            _resultado = True
+            'L_prCuentaGrabarHistorial(_numi, _empresa, _cuenta, _desc, _nivel, _moneda, _tipo, _numiPadre, "CUENTAS", 1)
+        Else
+            _resultado = False
+        End If
+
+        Return _resultado
+    End Function
     Public Shared Function L_prCuentaGrabar(ByRef _numi As String, _empresa As String, _cuenta As String, _desc As String, _nivel As String, _moneda As String, _tipo As String, _numiPadre As String, _detalle As DataTable) As Boolean
         Dim _resultado As Boolean
 
