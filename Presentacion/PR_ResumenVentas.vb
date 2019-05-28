@@ -7,11 +7,11 @@ Public Class PR_ResumenVentas
     Public _modulo As SideNavItem
     Private Sub _prIniciarTodo()
         _PMIniciarTodo()
-        _prCargarComboAlmacen(cbSucursal)
+
         _prCargarComboSector(cbsector)
         '_prCargarComboServicio(cbServicio)
         Me.Text = "reporte resumen de ventas".ToUpper
-
+        '_prCargarComboAlmacen(cbSucursal)
         MReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
     End Sub
 

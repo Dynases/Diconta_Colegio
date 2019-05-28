@@ -4210,6 +4210,37 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _resultado
     End Function
 
+
+
+
+    Public Shared Function L_fnGrabarMigracion(_dtDetalleMigracion As DataTable) As Boolean
+        Dim _resultado As Boolean
+        ' vcnumi ,@vcidcore ,@vcsector ,@vcSecNumi ,@vcnumivehic ,@vcalm ,@vcfdoc ,@vcclie ,@vcfvcr ,@vctipo ,
+        '@vcest ,@vcobs ,@vcdesc ,@vctotal 
+
+        Dim _Tabla As DataTable
+        Dim _listParam As New List(Of Datos.DParametro)
+
+
+        _listParam.Add(New Datos.DParametro("@tipo", 25))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@ventastype", "", _dtDetalleMigracion))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        If _Tabla.Rows.Count > 0 And _Tabla.Rows(0).Item(0) <> -100 Then
+
+            _resultado = True
+            'L_prDosificacionGrabarHistorial(numi, cia, alm, sfc,
+            '                                      autoriz, nfac, key, fdel,
+            '                                      fal, nota, nota2, est, "DOSIFICACION", 1)
+        Else
+
+            _resultado = False
+        End If
+
+        Return _resultado
+    End Function
+
     Public Shared Function L_fnModificarVentaLavadero(ByRef _vcnumi As String, _vcsector As Integer, _vcSecNumi As Integer, _vcnumivehic As Integer, _vcalm As Integer, _vcfdoc As String, _vcclie As Integer, _vcfvcr As String, _vctipo As Integer, _vcest As Integer, _vcobs As String, _vcdesc As Double, _vctotal As Decimal, _detalle As DataTable, _CodClienteCredito As Integer, factura As Integer, factanul As Integer, _vcmoneda As Integer, _vcbanco As Integer) As Boolean
         Dim _resultado As Boolean
         ' vcnumi ,@vcidcore ,@vcsector ,@vcSecNumi ,@vcnumivehic ,@vcalm ,@vcfdoc ,@vcclie ,@vcfvcr ,@vctipo ,
@@ -4258,6 +4289,31 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Dim _listParam As New List(Of Datos.DParametro)
 
         _listParam.Add(New Datos.DParametro("@tipo", 3))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_fnGeneralFormatoMigracion() As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 23))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_fnObtenerServicio(numiserv As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 24))
+        _listParam.Add(New Datos.DParametro("@numiServ", numiserv))
         _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
 

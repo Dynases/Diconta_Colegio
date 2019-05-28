@@ -382,7 +382,7 @@ Public Class F1_ServicioVenta
 
             _CodVehiculo = .GetValue("vcnumivehic")
 
-            _CodCliente = .GetValue("vcclie")
+            ''_CodCliente = .GetValue("vcclie")
 
             tbObservacion.Text = .GetValue("vcobs")
             NroCompronbante = .GetValue("vcidcore")
