@@ -144,7 +144,7 @@ Public Class F0_CargaVentasManuales
         End With
 
         With grMigracion.RootTable.Columns("nrodocumento")
-            .Width = 120
+            .Width = 100
             .Visible = True
             .Caption = "Factura/Recibo"
         End With
@@ -180,7 +180,20 @@ Public Class F0_CargaVentasManuales
     Private Sub btCargarDatos_Click(sender As Object, e As EventArgs) Handles btCargarDatos.Click
         Dim numi As String = ""
         Dim bandera As Boolean = False
+        Try
+            Dim i As Integer = CType(grMigracion.DataSource, DataTable).Rows.Count
 
+        Catch ex As Exception
+            Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+            ToastNotification.Show(Me, "No existen Datos para ser migrados".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+            Return
+        End Try
+
+        If (CType(grMigracion.DataSource, DataTable).Rows.Count <= 0) Then
+            Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+            ToastNotification.Show(Me, "No existen Datos para ser migrados".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+            Return
+        End If
 
         Dim res As Boolean = L_fnGrabarMigracion(CType(grMigracion.DataSource, DataTable))
 

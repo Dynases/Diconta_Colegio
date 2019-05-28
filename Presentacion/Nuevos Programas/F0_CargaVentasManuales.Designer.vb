@@ -272,7 +272,7 @@ Partial Class F0_CargaVentasManuales
         Me.grMigracion.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
         Me.grMigracion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grMigracion.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grMigracion.HeaderFormatStyle.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grMigracion.HeaderFormatStyle.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Bold)
         Me.grMigracion.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
         Me.grMigracion.Location = New System.Drawing.Point(4, 4)
         Me.grMigracion.Margin = New System.Windows.Forms.Padding(4)
