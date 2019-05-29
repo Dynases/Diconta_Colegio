@@ -4213,7 +4213,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
 
 
-    Public Shared Function L_fnGrabarMigracion(_dtDetalleMigracion As DataTable) As Boolean
+    Public Shared Function L_fnGrabarMigracion(_dtDetalleMigracion As DataTable, _vcobs As String) As Boolean
         Dim _resultado As Boolean
         ' vcnumi ,@vcidcore ,@vcsector ,@vcSecNumi ,@vcnumivehic ,@vcalm ,@vcfdoc ,@vcclie ,@vcfvcr ,@vctipo ,
         '@vcest ,@vcobs ,@vcdesc ,@vctotal 
@@ -4224,6 +4224,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         _listParam.Add(New Datos.DParametro("@tipo", 25))
         _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@vcobs", _vcobs))
         _listParam.Add(New Datos.DParametro("@ventastype", "", _dtDetalleMigracion))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
 
@@ -4302,6 +4303,32 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         _listParam.Add(New Datos.DParametro("@tipo", 23))
         _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_fnGeneralobtenerventas(Namearchivo As String) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 26))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@vcobs", Namearchivo))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
+
+        Return _Tabla
+    End Function
+
+    Public Shared Function L_fnGeneralobtenerNAmeAlumno(NumiAlumno As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 27))
+        _listParam.Add(New Datos.DParametro("@vcuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@numiEstudiante", NumiAlumno))
         _Tabla = D_ProcedimientoConParam("sp_Mam_TV002", _listParam)
 
         Return _Tabla

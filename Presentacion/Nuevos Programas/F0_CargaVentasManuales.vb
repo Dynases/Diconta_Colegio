@@ -16,6 +16,7 @@ Imports Datos
 Imports Facturacion
 
 Public Class F0_CargaVentasManuales
+    Dim namearchivo As String = ""
     Public Sub _Limpiar()
         Dim dt As DataTable = L_fnGeneralFormatoMigracion()
         dt.Rows().Clear()
@@ -26,7 +27,7 @@ Public Class F0_CargaVentasManuales
         Dim dt As DataTable = L_fnGeneralFormatoMigracion()
         dt.Rows().Clear()
         Dim codigoestudiante As Integer
-        Dim estudiante As String
+        Dim estudiante As String = ""
         Dim servicio As Integer
         Dim MontoDeposito As Double
         Dim fechadeposito As String
@@ -42,14 +43,15 @@ Public Class F0_CargaVentasManuales
             .Filter = "Todos los archivos (*.*)|*.*"
             .Multiselect = False
             If .ShowDialog = Windows.Forms.DialogResult.OK Then
-
+                namearchivo = .SafeFileName
                 Dim Archivo() As String = IO.File.ReadAllLines(.FileName)
                 For i As Integer = 0 To Archivo.Length - 1 Step 1
                     esfactura = False
                     Try
+                        estudiante = ""
                         codigobanco = Archivo(i).Substring(0, Archivo(i).IndexOf(",")).Trim
                         codigoestudiante = Archivo(i).Split(",")(2).Trim
-                        estudiante = Archivo(i).Split(",")(3).Trim
+                        ''estudiante = Archivo(i).Split(",")(3).Trim
                         servicio = Archivo(i).Split(",")(4).Trim
                         MontoDeposito = Archivo(i).Split(",")(5).Trim
                         fechadeposito = Archivo(i).Split(",")(6).Trim
@@ -68,6 +70,11 @@ Public Class F0_CargaVentasManuales
                         If (dt2.Rows.Count > 0) Then
                             nameServicio = dt2.Rows(0).Item(0)
                         End If
+                        Dim dtalumno As DataTable = L_fnGeneralobtenerNAmeAlumno(codigoestudiante)
+                        If (dtalumno.Rows.Count > 0) Then
+                            estudiante = dtalumno.Rows(0).Item(0)
+                        End If
+
                         dt.Rows.Add(codigobanco, codigoestudiante, estudiante, servicio, nameServicio, MontoDeposito, fechadeposito, nrocuota, esfactura, nrodocumento, codigocontrol, 0)
                     Catch ex As Exception
                         Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
@@ -167,7 +174,7 @@ Public Class F0_CargaVentasManuales
             .FilterMode = FilterMode.Automatic
             .FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges
             .GroupByBoxVisible = False
-            
+
             'diseño de la grilla
 
         End With
@@ -194,8 +201,13 @@ Public Class F0_CargaVentasManuales
             ToastNotification.Show(Me, "No existen Datos para ser migrados".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
             Return
         End If
-
-        Dim res As Boolean = L_fnGrabarMigracion(CType(grMigracion.DataSource, DataTable))
+        Dim dt As DataTable = L_fnGeneralobtenerventas(namearchivo)
+        If (dt.Rows.Count > 0) Then
+            Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
+            ToastNotification.Show(Me, "El archivo : ".ToUpper + namearchivo + " Ya ha sido migrado, por favor seleccione otro archivo de migración", img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
+            Return
+        End If
+        Dim res As Boolean = L_fnGrabarMigracion(CType(grMigracion.DataSource, DataTable), namearchivo)
 
 
         If res Then
