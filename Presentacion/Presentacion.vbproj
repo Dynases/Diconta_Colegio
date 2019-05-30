@@ -75,59 +75,75 @@
   <ItemGroup>
     <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\proyectos\DiConta\DiConta\Presentacion\bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
+      <HintPath>..\..\..\GIT\Proyecto Corimexo\ProyectoCorimexo\DinoM\bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Dropbox\BD\Librerias\DotNet\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Keyboard">
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Keyboard.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Dropbox\BD\Librerias\DotNet\DevComponents.DotNetBar.Layout.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Layout">
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Layout.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Dropbox\BD\Librerias\DotNet\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design">
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Dropbox\BD\Librerias\DotNet\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.Schedule">
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.Schedule.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Dropbox\BD\Librerias\DotNet\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid">
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>C:\librerias\DotNet\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>C:\librerias\DotNet\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design">
+      <HintPath>C:\librerias\DotNet\DevComponents.SuperGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>C:\librerias\DotNet\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
     <Reference Include="Gma.QrCodeNet.Encoding">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Qrcode_Barcode\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <HintPath>C:\librerias\QrCode\Gma.QrCodeNet.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="GMap.NET.Core">
-      <HintPath>C:\Users\usuario\Google Drive\INFORMACION MARCO ANTONIO\Librerias\GMap\GMap.NET.Core.dll</HintPath>
+      <HintPath>C:\librerias\Gmap\GMap.NET.Core.dll</HintPath>
     </Reference>
     <Reference Include="GMap.NET.WindowsForms">
-      <HintPath>C:\Users\usuario\Google Drive\INFORMACION MARCO ANTONIO\Librerias\GMap\GMap.NET.WindowsForms.dll</HintPath>
+      <HintPath>C:\librerias\Gmap\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AcroPDFLib">
+      <HintPath>C:\librerias\PDF\Interop.AcroPDFLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\librerias\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Data.v3">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Janus\Janus.Data.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Data.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.CalendarCombo.v3">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Common.v3">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Janus\Janus.Windows.Common.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.Common.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.GridEX.v3">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Ribbon.v3">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.UI.v3">
-      <HintPath>C:\Users\usuario\Dropbox\Utilitarios\Aplicaciones\Janus\Janus.Windows.UI.v3.dll</HintPath>
+      <HintPath>C:\librerias\Janus\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="OnBarcode.Barcode.WinForms">
+      <HintPath>C:\librerias\QrCode\OnBarcode.Barcode.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -381,12 +397,6 @@
       <DependentUpon>F1_ServicioVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="F1_ServicioVenta.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Nuevos Programas\F0_CargaVentasManuales.Designer.vb">
@@ -941,9 +951,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F1_ServicioVenta.resx">
       <DependentUpon>F1_ServicioVenta.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevos Programas\F0_CargaVentasManuales.resx">
       <DependentUpon>F0_CargaVentasManuales.vb</DependentUpon>
