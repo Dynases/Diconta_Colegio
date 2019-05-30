@@ -148,9 +148,9 @@ Module P_Global
 
     'configuracion del sistema tabla TCG011
     Public gs_empresaDireccion As String
-    Public gs_empresaNit As String
+    Public gs_empresaNit As String = ""
     Public gs_empresaDescSistema As String
-    Public gs_empresaDesc As String
+    Public gs_empresaDesc As String = ""
     Public gi_empresaNumi As String
 #End Region
 

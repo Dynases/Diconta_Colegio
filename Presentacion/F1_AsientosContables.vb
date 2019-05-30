@@ -45,173 +45,7 @@ Public Class F1_AsientosContables
     'L_prIntegracionBancos
 #Region "Metodos SobreEscritos"
 
-    Private Sub _prCargarBancos()
-        Dim dt As New DataTable
-        dt = L_prIntegracionBancos()
-        grbanco.DataSource = dt
-        grbanco.RetrieveStructure()
-        grbanco.AlternatingColors = True
 
-        'banco.canumi ,cast ('' as image) as img ,banco .canombre ,banco .cacuenta ,banco.caimage ,0 as camonto, 0 as caestado
-        With grbanco.RootTable.Columns("canumi")
-            .Width = 100
-            .Caption = "CODIGO"
-            .Visible = False
-
-        End With
-        With grbanco.RootTable.Columns("img")
-            .Width = 100
-            .Caption = "Imagen"
-            .Visible = True
-
-        End With
-
-        With grbanco.RootTable.Columns("canombre")
-            .Width = 250
-            .Visible = True
-            .Caption = "Bancos"
-        End With
-        With grbanco.RootTable.Columns("cacuenta")
-            .Width = 110
-            .Visible = True
-            .Caption = "Nro Cuenta"
-        End With
-
-        With grbanco.RootTable.Columns("caimage")
-            .Width = 110
-            .Visible = False
-            .Caption = "TIPO DE CAMBIO"
-        End With
-
-        With grbanco.RootTable.Columns("camonto")
-            .Width = 90
-            .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
-            .Visible = True
-            .FormatString = "0.00"
-            .Caption = "Monto"
-
-        End With
-        With grbanco.RootTable.Columns("caestado")
-            .Width = 100
-            .Caption = "estado"
-            .Visible = False
-
-        End With
-        With grbanco.RootTable.Columns("ctanumi")
-            .Width = 10
-            .Caption = "numibanco"
-            .Visible = False
-
-        End With
-
-        With grbanco
-            .DefaultFilterRowComparison = FilterConditionOperator.Equal
-            .FilterMode = FilterMode.Automatic
-            .FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges
-            .GroupByBoxVisible = False
-            'diseño de la grilla
-            .VisualStyle = VisualStyle.Office2007
-        End With
-
-        _prDibujarImagenes()
-    End Sub
-
-    Private Sub _prCargarBancosRegistrados(ifnumi As String)
-        Dim dt As New DataTable
-        dt = L_prIntegracionBancosRegistrados(ifnumi)
-        grbanco.DataSource = dt
-        grbanco.RetrieveStructure()
-        grbanco.AlternatingColors = True
-
-        'banco.canumi ,cast ('' as image) as img ,banco .canombre ,banco .cacuenta ,banco.caimage ,0 as camonto, 0 as caestado
-        With grbanco.RootTable.Columns("canumi")
-            .Width = 100
-            .Caption = "CODIGO"
-            .Visible = False
-
-        End With
-        With grbanco.RootTable.Columns("img")
-            .Width = 100
-            .Caption = "Imagen"
-            .Visible = True
-
-        End With
-
-        With grbanco.RootTable.Columns("canombre")
-            .Width = 250
-            .Visible = True
-            .Caption = "Bancos"
-        End With
-        With grbanco.RootTable.Columns("cacuenta")
-            .Width = 110
-            .Visible = True
-            .Caption = "Nro Cuenta"
-        End With
-
-        With grbanco.RootTable.Columns("caimage")
-            .Width = 110
-            .Visible = False
-            .Caption = "TIPO DE CAMBIO"
-        End With
-
-        With grbanco.RootTable.Columns("camonto")
-            .Width = 90
-            .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
-            .Visible = True
-            .FormatString = "0.00"
-            .Caption = "Monto"
-
-        End With
-        With grbanco.RootTable.Columns("caestado")
-            .Width = 100
-            .Caption = "estado"
-            .Visible = False
-
-        End With
-
-        With grbanco
-            .DefaultFilterRowComparison = FilterConditionOperator.Equal
-            .FilterMode = FilterMode.Automatic
-            .FilterRowUpdateMode = FilterRowUpdateMode.WhenValueChanges
-            .GroupByBoxVisible = False
-            'diseño de la grilla
-            .VisualStyle = VisualStyle.Office2007
-        End With
-
-        _prDibujarImagenes()
-    End Sub
-    Public Sub _prDibujarImagenes()
-        Dim length As Integer = CType(grbanco.DataSource, DataTable).Rows.Count
-        For i As Integer = 0 To length - 1 Step 1
-            Dim nameImagen As String = CType(grbanco.DataSource, DataTable).Rows(i).Item("caimage")
-            If (nameImagen.Equals("Default.jpg")) Then
-                Dim Bin As New MemoryStream
-                Dim img As New Bitmap(My.Resources.imageDefault, 100, 80)
-                img.Save(Bin, Imaging.ImageFormat.Jpeg)
-                Bin.Dispose()
-
-                CType(grbanco.DataSource, DataTable).Rows(i).Item("img") = Bin.GetBuffer
-            Else
-                Dim Bin As New MemoryStream
-                If (File.Exists(RutaGlobal + "\Imagenes\Imagenes Faubrica" + nameImagen)) Then
-                    Dim img As New Bitmap(New Bitmap(RutaGlobal + "\Imagenes\Imagenes Faubrica" + nameImagen), 90, 40)
-                    img.Save(Bin, Imaging.ImageFormat.Jpeg)
-                    CType(grbanco.DataSource, DataTable).Rows(i).Item("img") = Bin.GetBuffer
-                    Bin.Dispose()
-                Else
-
-                    Dim img As New Bitmap(My.Resources.imageDefault, 100, 80)
-                    img.Save(Bin, Imaging.ImageFormat.Jpeg)
-                    Bin.Dispose()
-
-                    CType(grbanco.DataSource, DataTable).Rows(i).Item("img") = Bin.GetBuffer
-
-                End If
-            End If
-
-
-        Next
-    End Sub
     Private Sub _prCargarMovimiento()
         Dim dt As New DataTable
         dt = L_prIntegracionGeneral()
@@ -453,122 +287,13 @@ Public Class F1_AsientosContables
         _prAplicarCondiccionJanus()
     End Sub
 
-    Private Sub _prCargarDetalleMovimientoBanco(_numi As String)
-        Dim dt As New DataTable
-        dt = L_prIntegracionDetalleBanco(_numi)
-        _prArmarDetalleDt(dt)
-        grAsientoBanco.DataSource = dt
-        grAsientoBanco.RetrieveStructure()
-        grAsientoBanco.AlternatingColors = True
-        ' a.icid ,a.icibid ,a.iccprod ,b.cicdprod1  as producto,a.iccant ,
-        'a.icsector  ,Cast(null as image ) as img,1 as estado,
-        '(Sum(inv.iccven)  +a.iccant ) as stock
 
-        With grAsientoBanco.RootTable.Columns("canumi")
-            .Width = 100
-
-            .Visible = False
-        End With
-        With grAsientoBanco.RootTable.Columns("variable")
-            .Width = 100
-
-            .Visible = False
-        End With
-        With grAsientoBanco.RootTable.Columns("linea")
-            .Width = 100
-
-            .Visible = False
-        End With
-        With grAsientoBanco.RootTable.Columns("nro")
-            .Width = 120
-            .Caption = "NRO CUENTA"
-            .Visible = True
-        End With
-        With grAsientoBanco.RootTable.Columns("cadesc")
-            .Width = 500
-            .Caption = "DESCRIPCION"
-            .Visible = True
-        End With
-        With grAsientoBanco.RootTable.Columns("chporcen")
-            .Width = 100
-
-            .Visible = False
-        End With
-        With grAsientoBanco.RootTable.Columns("chdebe")
-            .Width = 180
-            .Caption = "DEBE"
-            .Visible = False
-        End With
-        With grAsientoBanco.RootTable.Columns("chhaber")
-            .Width = 180
-            .Caption = "HABER"
-            .Visible = False
-        End With
-        With grAsientoBanco.RootTable.Columns("tc")
-            .Width = 70
-            .Caption = "TC"
-            .Visible = True
-            .FormatString = "0.00"
-        End With
-        With grAsientoBanco.RootTable.Columns("debe")
-            .Width = 100
-            .Caption = "DEBE BS"
-            .Visible = True
-            .TextAlignment = TextAlignment.Far
-            .FormatString = "0.00"
-            .TotalFormatString = "0.00"
-            .AggregateFunction = AggregateFunction.Sum
-
-        End With
-        With grAsientoBanco.RootTable.Columns("haber")
-            .Width = 100
-            .Caption = "HABER BS"
-            .Visible = True
-            .FormatString = "0.00"
-            .TotalFormatString = "0.00"
-            .TextAlignment = TextAlignment.Far
-            .AggregateFunction = AggregateFunction.Sum
-
-        End With
-
-        With grAsientoBanco.RootTable.Columns("debesus")
-            .Width = 100
-            .Caption = "DEBE SUS"
-            .Visible = True
-            .TextAlignment = TextAlignment.Far
-            .FormatString = "0.00"
-            .TotalFormatString = "0.00"
-            .AggregateFunction = AggregateFunction.Sum
-
-        End With
-        With grAsientoBanco.RootTable.Columns("habersus")
-            .Width = 100
-            .Caption = "HABER SUS"
-            .Visible = True
-            .FormatString = "0.00"
-            .TotalFormatString = "0.00"
-            .TextAlignment = TextAlignment.Far
-            .AggregateFunction = AggregateFunction.Sum
-
-        End With
-        With grAsientoBanco
-            .TotalRowFormatStyle.BackColor = Color.Gold
-            .TotalRowPosition = TotalRowPosition.BottomFixed
-            .TotalRow = InheritableBoolean.True
-
-            .GroupByBoxVisible = False
-            'diseño de la grilla
-            .VisualStyle = VisualStyle.Office2007
-        End With
-
-        _prAplicarCondiccionJanusBanco()
-    End Sub
 #End Region
 #Region "METODOS PRIVADOS"
 
     Private Sub _IniciarTodo()
         ''L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)
-        _prCargarComboAlmacen(cbSucursal)
+
         'SuperTabItemBuscador.Visible = False
         MSuperTabControl.SelectedTabIndex = 0
         Me.WindowState = FormWindowState.Maximized
@@ -579,41 +304,10 @@ Public Class F1_AsientosContables
         _prAsignarPermisos()
         _prCargarMovimiento()
         _prInhabiliitar()
-        _prCargarBancos()
     End Sub
 
-    Private Sub _prCargarComboAlmacen(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
-        Dim dt As New DataTable
-        dt = L_fnListarAlmacenDosificacion()
-        With mCombo
-            .DropDownList.Columns.Clear()
-            .DropDownList.Columns.Add("cod").Width = 60
-            .DropDownList.Columns("cod").Caption = "COD"
-            .DropDownList.Columns.Add("desc").Width = 500
-            .DropDownList.Columns("desc").Caption = "ALMACEN"
-            .ValueMember = "cod"
-            .DisplayMember = "desc"
-            .DataSource = dt
-            .Refresh()
-        End With
-        If (gb_userTodasSuc = False And CType(mCombo.DataSource, DataTable).Rows.Count > 0) Then
 
 
-            mCombo.SelectedIndex = _fnObtenerPosSucursal(gi_userNumiSucursal)
-            mCombo.ReadOnly = True
-        Else
-            mCombo.ReadOnly = False
-        End If
-    End Sub
-    Public Function _fnObtenerPosSucursal(numi As Integer)
-        Dim length As Integer = CType(cbSucursal.DataSource, DataTable).Rows.Count - 1
-        For i As Integer = 0 To length Step 1
-            If (CType(cbSucursal.DataSource, DataTable).Rows(i).Item("cod") = numi) Then
-                Return i
-            End If
-        Next
-        Return -1
-    End Function
 
     Public Sub _prArmarCuadre(ByRef dt As DataTable)
         Try
@@ -655,212 +349,25 @@ Public Class F1_AsientosContables
 
     End Sub
 
-    Public Sub _prArmarCabanas(ByRef dt As DataTable)
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(-10, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero
-        If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-
-            Dim numeroCuenta As Integer = 0
-
-            Dim numiCuenta As Integer = 295
-            Dim dtnombrePadre As DataTable = L_prObtenerNombreCuenta("411106")
-            dt.Rows.Add(numiCuenta, "411106", dtnombrePadre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Hotel, 0)
-
-            Dim dtcabana As DataTable = L_prObtenerServiciosCabanas(tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
-            For i As Integer = 0 To dtcabana.Rows.Count - 1 Step 1
-                Dim numiCuentaHijo As Integer = 296
-                Dim dttotc As DataTable
-                Dim total As Double = dtcabana.Rows(i).Item("total")
-
-
-                If (total > 0) Then
-                    Dim dtnombre As DataTable = L_prObtenerNombreCuenta("41110601")
-                    If (dtnombre.Rows.Count > 0) Then
-
-                        If (numeroCuenta <> 41110601) Then
-                            Dim totalDescuento As Double = total - Round(to3Decimales((total * 0.13)), 2)
-
-                            dt.Rows.Add(numiCuentaHijo, "41110601", dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Hotel, 0)
-                            numeroCuenta = 41110601
-                            Linea = Linea + 1
-                            Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                            Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-
-                            dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtcabana.Rows(i).Item("descripcion"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Hotel, Linea)
-
-                        Else
-
-                            Dim totalDescuento As Double = (total - Round(to3Decimales((total * 0.13)), 2))
-                            Linea = Linea + 1
-
-                            Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                            Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-
-                            dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtcabana.Rows(i).Item("descripcion"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Hotel, Linea)
-                            numeroCuenta = 41110601
-                        End If
 
 
 
-                    End If
-
-
-                End If
-
-
-
-            Next
-        End If
-
-    End Sub
-    Public Sub _prArmarCertificacion(ByRef dt As DataTable)
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(NumiCertificacion, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero
-        If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioGeneral(gi_empresaNumi, NumiCertificacion, cbSucursal.Value)
-            Dim numeroCuenta As Integer = 0
-            For j As Integer = 0 To dtCuentaPadres.Rows.Count - 1 Step 1
-                Dim numiCuenta As Integer = dtCuentaPadres.Rows(j).Item("canumi")
-                dt.Rows.Add(numiCuenta, dtCuentaPadres.Rows(j).Item("cacta"), dtCuentaPadres.Rows(j).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Certificacion, 0)
-
-                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioGeneral(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi, NumiCertificacion, cbSucursal.Value)
-                For i As Integer = 0 To dtCuentaServ.Rows.Count - 1 Step 1
-                    Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
-                    Dim dttotc As DataTable
-                    If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
-
-                        dttotc = L_prObtenerTotalPorCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
-                        If (dttotc.Rows(0).Item("total") > 0) Then
-                            Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
-                            If (dtnombre.Rows.Count > 0) Then
-
-                                If (numeroCuenta <> dtCuentaServ.Rows(i).Item("senrocuenta")) Then
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-
-                                    dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Certificacion, 0)
-                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                    Linea = Linea + 1
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-
-                                    Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad")
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, "POR INGRESO DE " + Str(cantidad) + " " + dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Certificacion, Linea)
-
-                                Else
-
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-                                    Linea = Linea + 1
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-                                    Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad")
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, "POR INGRESO DE " + Str(cantidad) + " " + dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Certificacion, Linea)
-                                End If
-
-
-
-                            End If
-
-
-                        End If
-
-                    End If
-                Next
-            Next
-
-        End If
-
-    End Sub
-
-
-
-    Public Sub _prArmarAdministracionn(ByRef dt As DataTable)
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(NumiAdministracion, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero
-        If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioGeneral(gi_empresaNumi, NumiAdministracion, cbSucursal.Value)
-            Dim numeroCuenta As Integer = 0
-            For j As Integer = 0 To dtCuentaPadres.Rows.Count - 1 Step 1
-                Dim numiCuenta As Integer = dtCuentaPadres.Rows(j).Item("canumi")
-                dt.Rows.Add(numiCuenta, dtCuentaPadres.Rows(j).Item("cacta"), dtCuentaPadres.Rows(j).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, NumiAdministracion, 0)
-
-                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioGeneral(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi, NumiAdministracion, cbSucursal.Value)
-                For i As Integer = 0 To dtCuentaServ.Rows.Count - 1 Step 1
-                    Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
-                    Dim dttotc As DataTable
-                    If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
-
-                        dttotc = L_prObtenerTotalPorCuentaAdministracion(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value, NumiAdministracion)
-                        If (dttotc.Rows(0).Item("total") > 0) Then
-                            Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
-                            If (dtnombre.Rows.Count > 0) Then
-
-                                If (numeroCuenta <> dtCuentaServ.Rows(i).Item("senrocuenta")) Then 'OJO, ACA PONE EL MONTO PERO DESCONTADO
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-                                    Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad")
-
-                                    'AUMENTADO DANNY''''''''''''''
-                                    'Dim dtLicenciaInternacional As DataTable = L_prIntegracionObtenerCuentaLicenciaInternacional()
-                                    'totalDescuento = totalDescuento - dtLicenciaInternacional.Rows(0).Item("esmonto") * cantidad
-                                    '''''''''''''''''''''''''
-                                    dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Administracion, 0)
-                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                    Linea = Linea + 1
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-
-                                    ''Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad") ''movido por danny unas filas arriba
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, "POR INGRESO DE " + Str(cantidad) + " " + dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-
-
-                                    'AUMENTADO DANNY''''''''''''''''''''''''''''''''
-                                    ''Linea = Linea + 1
-
-                                    ''Dim __desc As String = "GASTO POR " + dtnombre.Rows(0).Item("cadesc") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy")
-                                    ''Dim __numiCuenta As Integer = dtLicenciaInternacional.Rows(0).Item("esnumitc1")
-                                    ''Dim __cuenta As Integer = dtLicenciaInternacional.Rows(0).Item("cacta")
-                                    ''Dim __total As Double = dtLicenciaInternacional.Rows(0).Item("esmonto") * cantidad
-                                    ''Dim __totalDolares As Double = Round(to3Decimales(__total / (tbTipoCambio.Value)), 2)
-                                    ''dt.Rows.Add(__numiCuenta, __cuenta, __desc, DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, __total, DBNull.Value, __totalDolares, Administracion, Linea)
-
-                                    '''''''''''''''''''''''''''''''''''''''''''''''''
-
-                                Else
-
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-                                    Linea = Linea + 1
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-                                    Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad")
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, "POR INGRESO DE " + Str(cantidad) + " " + dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-                                End If
-
-
-
-                            End If
-
-
-                        End If
-
-                    End If
-                Next
-            Next
-
-        End If
-
-    End Sub
     Public Sub _prArmarEscuela(ByRef dt As DataTable)
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(1, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero
+        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(1, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)  '''3=Lavadero
         If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioGeneral(gi_empresaNumi, 1, cbSucursal.Value)
+            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioGeneral(gi_empresaNumi, 1, 1)
             Dim numeroCuenta As Integer = 0
             For j As Integer = 0 To dtCuentaPadres.Rows.Count - 1 Step 1
                 Dim numiCuenta As Integer = dtCuentaPadres.Rows(j).Item("canumi")
                 dt.Rows.Add(numiCuenta, dtCuentaPadres.Rows(j).Item("cacta"), dtCuentaPadres.Rows(j).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Escuela, 0)
 
-                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioGeneral(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi, 1, cbSucursal.Value)
+                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioGeneral(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi, 1, 1)
                 For i As Integer = 0 To dtCuentaServ.Rows.Count - 1 Step 1
                     Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
                     Dim dttotc As DataTable
                     If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
 
-                        dttotc = L_prObtenerTotalPorCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                        dttotc = L_prObtenerTotalPorCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                         If (dttotc.Rows(0).Item("total") > 0) Then
                             Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
                             If (dtnombre.Rows.Count > 0) Then
@@ -903,265 +410,9 @@ Public Class F1_AsientosContables
 
     End Sub
 
-    Public Sub _prArmarSocios(ByRef dt As DataTable)
-        Dim totalDescuento As Double
-        Dim cant As Integer = 0
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(2, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero  Ok
-        If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioGeneral(gi_empresaNumi, 2, cbSucursal.Value)
-
-            Dim numeroCuenta As Integer = 0
-            For j As Integer = 0 To dtCuentaPadres.Rows.Count - 1 Step 1
-                Dim numiCuenta As Integer = dtCuentaPadres.Rows(j).Item("canumi")
-                dt.Rows.Add(numiCuenta, dtCuentaPadres.Rows(j).Item("cacta"), dtCuentaPadres.Rows(j).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Administracion, 0)
-
-                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioGeneralSocio(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi, 2, cbSucursal.Value)
-                For i As Integer = 0 To dtCuentaServ.Rows.Count - 1 Step 1
-                    Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
-                    Dim dttotc As DataTable
-                    If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
-
-                        dttotc = L_prObtenerTotalPorCuentaAdministracion(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value, 2)
-                        If (dttotc.Rows(0).Item("total") > 0) Then
-                            Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
-                            If (dtnombre.Rows.Count > 0) Then
-                                If (numeroCuenta <> dtCuentaServ.Rows(i).Item("senrocuenta")) Then
-
-                                    Dim servicio As Integer = dtCuentaServ.Rows(i).Item("senumiserv")
-
-                                    'pregunto si la cuenta es mayor a 2
-                                    If servicio > 2 Then 'lo trato como una cuenta normal,no como marco
-                                        If dtCuentaServ.Rows(i).Item("sefactu") = 1 Then 'dtCuentaServ.Rows(i).Item("senumiserv") = 1
-                                            totalDescuento = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-                                        Else
-                                            totalDescuento = dttotc.Rows(0).Item("total")
-                                        End If
-
-
-                                        Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad")
-
-                                        'AUMENTADO DANNY''''''''''''''
-                                        'Dim dtLicenciaInternacional As DataTable = L_prIntegracionObtenerCuentaLicenciaInternacional()
-                                        'totalDescuento = totalDescuento - dtLicenciaInternacional.Rows(0).Item("esmonto") * cantidad
-                                        '''''''''''''''''''''''''
-                                        dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Administracion, 0)
-                                        numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                        Linea = Linea + 1
-                                        Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                        Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-
-                                        ''Dim cantidad As Integer = dttotc.Rows(0).Item("cantidad") ''movido por danny unas filas arriba
-                                        dt.Rows.Add(numiCuentaHijo, DBNull.Value, "POR INGRESO DE " + Str(cantidad) + " " + dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-                                        'Lb_efec.Text = Lb_efec.Text + totales
-                                    Else 'lo trato como normalmente lo trataba marco
-                                        dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Administracion, 0)
-
-                                        Dim dt_Socios As DataTable = L_prListarSociosCuotas(dtCuentaServ.Rows(i).Item("senrocuenta"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value) '''Lista
-
-                                        For k As Integer = 0 To dt_Socios.Rows.Count - 1 Step 1
-                                            totalDescuento = (dt_Socios.Rows(k).Item("total") - (dt_Socios.Rows(k).Item("total") * 0.13))
-
-                                            If (servicio = 1) Then
-                                                Dim _detallePagos As DataTable = L_prListarPagosSocioss(dt_Socios.Rows(k).Item("vcnumi"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
-                                                If (_detallePagos.Rows.Count > 1) Then
-                                                    Linea = Linea + 1
-                                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                                    Dim TotalSus As Double = Round((totales / (tbTipoCambio.Value)), 2)
-
-                                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, dt_Socios.Rows(k).Item("socio") + " CTAS " + _detallePagos.Rows(0).Item("mes") + " A " + _detallePagos.Rows(_detallePagos.Rows.Count - 1).Item("mes") + " / " + _detallePagos.Rows(_detallePagos.Rows.Count - 1).Item("seano").ToString, DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-
-                                                Else
-                                                    If (_detallePagos.Rows.Count = 1) Then
-                                                        Linea = Linea + 1
-                                                        Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                                        Dim TotalSus As Double = Round((totales / (tbTipoCambio.Value)), 2)
-                                                        numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                                        dt.Rows.Add(numiCuentaHijo, DBNull.Value, dt_Socios.Rows(k).Item("socio") + " CTAS " + _detallePagos.Rows(_detallePagos.Rows.Count - 1).Item("mes") + " / " + _detallePagos.Rows(_detallePagos.Rows.Count - 1).Item("seano").ToString, DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-
-                                                    End If
-                                                End If
-                                            End If
-
-                                            If (servicio = 2) Then
-                                                Dim _detallePagos As DataTable = L_prListarPagosSociossCuotaMourtotia(dt_Socios.Rows(k).Item("vcnumi"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value) ''Ok LISTA
-                                                If (_detallePagos.Rows.Count > 1) Then
-                                                    Linea = Linea + 1
-                                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                                    Dim TotalSus As Double = Round((totales / (tbTipoCambio.Value)), 2)
-                                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, dt_Socios.Rows(k).Item("socio") + " CTAS MORT GEST /" + _detallePagos.Rows(0).Item("sfgestion").ToString + " A " + _detallePagos.Rows(_detallePagos.Rows.Count - 1).Item("sfgestion").ToString, DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-
-                                                Else
-
-                                                    If (_detallePagos.Rows.Count = 1) Then
-                                                        cant += 1
-                                                        Dim val As Decimal = Round(to3Decimales((dt_Socios.Rows(k).Item("total") * 0.13)), 2)
-                                                        totalDescuento = (dt_Socios.Rows(k).Item("total") - val)
-                                                        If (cant Mod 2 = 0) Then
-                                                            totalDescuento = totalDescuento - 0.01
-                                                        End If
-
-
-
-                                                        Linea = Linea + 1
-                                                        numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                                        Dim totales As Double = Round(to3Decimales(totalDescuento), 3)
-                                                        Dim TotalSus As Double = Round((totales / (tbTipoCambio.Value)), 2)
-                                                        dt.Rows.Add(numiCuentaHijo, DBNull.Value, dt_Socios.Rows(k).Item("socio") + " CTAS MORT GEST /" + _detallePagos.Rows(0).Item("sfgestion").ToString, DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Administracion, Linea)
-                                                    End If
-
-
-                                                End If
-                                            End If
-
-                                        Next
-                                    End If
-
-
-                                End If
-
-
-
-                            End If
-
-
-                        End If
-
-                    End If
-                Next
-            Next
-
-        End If
-
-    End Sub
-    Public Sub _prArmarRemolque(ByRef dt As DataTable)
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(4, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero
-        If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioGeneral(gi_empresaNumi, 4, cbSucursal.Value)
-            Dim numeroCuenta As Integer = 0
-            For j As Integer = 0 To dtCuentaPadres.Rows.Count - 1 Step 1
-                Dim numiCuenta As Integer = dtCuentaPadres.Rows(j).Item("canumi")
-                dt.Rows.Add(numiCuenta, dtCuentaPadres.Rows(j).Item("cacta"), dtCuentaPadres.Rows(j).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Remolque, 0)
-
-                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioGeneral(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi, 4, cbSucursal.Value)
-                For i As Integer = 0 To dtCuentaServ.Rows.Count - 1 Step 1
-                    Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
-                    Dim dttotc As DataTable
-                    If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
-
-                        dttotc = L_prObtenerTotalPorCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
-                        If (dttotc.Rows(0).Item("total") > 0) Then
-                            Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
-                            If (dtnombre.Rows.Count > 0) Then
-
-                                If (numeroCuenta <> dtCuentaServ.Rows(i).Item("senrocuenta")) Then
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-
-                                    dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Remolque, 0)
-                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                    Linea = Linea + 1
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Remolque, Linea)
-
-                                Else
-
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - Round(to3Decimales((dttotc.Rows(0).Item("total") * 0.13)), 2))
-                                    Linea = Linea + 1
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Remolque, Linea)
-                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                End If
-
-
-
-                            End If
-
-
-                        End If
-
-                    End If
-                Next
-            Next
-
-        End If
-
-    End Sub
-    Public Sub _prArmarLavadero(ByRef dt As DataTable)
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalServiciosLavadero(3, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  '''3=Lavadero
-        If (dtServicioTotal.Rows(0).Item("total") > 0) Then
-            'cuenta.canumi , cuenta.cacta As nro, cuenta.cadesc, b.chporcen, b.chdebe, b.chhaber, cast(null As Decimal (18, 2)) as debe,cast(null as decimal (18,2)) as haber
-            Dim dtCuentaPadres As DataTable = L_prListarCuentasServicioLavadero(gi_empresaNumi)
-            Dim numeroCuenta As Integer = 0
-            For j As Integer = 0 To dtCuentaPadres.Rows.Count - 1 Step 1
-                Dim numiCuenta As Integer = dtCuentaPadres.Rows(j).Item("canumi")
-                dt.Rows.Add(numiCuenta, dtCuentaPadres.Rows(j).Item("cacta"), dtCuentaPadres.Rows(j).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Lavadero, 0)
-
-                Dim dtCuentaServ As DataTable = L_prServicioListarCuentasServicioLavadero(dtCuentaPadres.Rows(j).Item("cacta"), gi_empresaNumi)
-
-                For i As Integer = 0 To dtCuentaServ.Rows.Count - 1 Step 1
-                    Dim numiCuentaHijo As Integer = dtCuentaServ.Rows(i).Item("canumi")
-                    Dim dttotc As DataTable
-                    If (dtCuentaServ.Rows(i).Item("seest") = 1) Then
-
-                        dttotc = L_prObtenerTotalPorCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
-                        If (dttotc.Rows(0).Item("total") > 0) Then
-
-                            Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
-                            If (dtnombre.Rows.Count > 0) Then
-
-                                If (numeroCuenta <> dtCuentaServ.Rows(i).Item("senrocuenta")) Then
-
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - (dttotc.Rows(0).Item("total") * 0.13))
-                                    Linea = Linea + 1
-                                    dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Lavadero, 0)
-
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round((totales / (tbTipoCambio.Value)), 2)
-
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Lavadero, Linea)
-                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                Else
-                                    Linea = Linea + 1
-                                    numeroCuenta = dtCuentaServ.Rows(i).Item("senrocuenta")
-                                    Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - (dttotc.Rows(0).Item("total") * 0.13))
-                                    Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                    Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-                                    dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Lavadero, Linea)
-                                End If
-                            End If
-                        End If
-                    Else
-                        dttotc = L_prObtenerTotalPorCuentaProductos(dtCuentaServ.Rows(i).Item("senrocuenta"), dtCuentaServ.Rows(i).Item("seref"), tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
-                        If (dttotc.Rows(0).Item("total") > 0) Then
-                            Dim dtnombre As DataTable = L_prObtenerNombreCuenta(dtCuentaServ.Rows(i).Item("senrocuenta"))
-                            If (dtnombre.Rows.Count > 0) Then
-
-                                Dim totalDescuento As Double = (dttotc.Rows(0).Item("total") - (dttotc.Rows(0).Item("total") * 0.13))
-                                dt.Rows.Add(numiCuentaHijo, dtCuentaServ.Rows(i).Item("senrocuenta"), dtnombre.Rows(0).Item("cadesc"), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, Lavadero, 0)
-                                Linea = Linea + 1
-                                Dim totales As Double = Round(to3Decimales(totalDescuento), 2)
-                                Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
-                                dt.Rows.Add(numiCuentaHijo, DBNull.Value, dtCuentaServ.Rows(i).Item("seref") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, DBNull.Value, totales, DBNull.Value, TotalSus, Lavadero, Linea)
-                            End If
-
-
-                        End If
-
-                    End If
-
-
-                Next
-            Next
-        End If
-
-
-    End Sub
     Sub _prCargarNumiVentas(_categoria As Integer)
 
-        Dim dtServicioTotal As DataTable = L_prServicioObtenerNumiPorCategoria(_categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+        Dim dtServicioTotal As DataTable = L_prServicioObtenerNumiPorCategoria(_categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
         If (dtServicioTotal.Rows.Count > 0) Then
             _ListVentas.Merge(dtServicioTotal)
         End If
@@ -1200,9 +451,9 @@ Public Class F1_AsientosContables
                     Dim categoria As Integer = dtServicios.Rows(j).Item("cenum")
                     Dim dtServicioTotal As DataTable
                     If porcentaje = 3 Then 'porcentaje = 3 CODIGO DANNY PARA SEPARAR TOTALES PARA IT
-                        dtServicioTotal = L_prServicioObtenerTotalPorCategoria(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  ''Ok
+                        dtServicioTotal = L_prServicioObtenerTotalPorCategoria(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)  ''Ok
                     Else
-                        dtServicioTotal = L_prServicioObtenerTotalPorCategoriaTodosConRecibo(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  ''Ok
+                        dtServicioTotal = L_prServicioObtenerTotalPorCategoriaTodosConRecibo(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)  ''Ok
                     End If
                     If (dtServicioTotal.Rows.Count > 0) Then
                         If (contador = 1) Then
@@ -1272,11 +523,11 @@ Public Class F1_AsientosContables
                                 'End If
                             Else
                                 BanderaCuentaPorCobrar = True
-                                Dim dtserviciostotalcuentacobrar As DataTable 'Dim dtServiciosTotalCuentaCobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                Dim dtserviciostotalcuentacobrar As DataTable 'Dim dtServiciosTotalCuentaCobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 'total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 If (categoria = 1) Then ''''''''Escuela
-                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                     total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                     If total > 0 Then  'Efectivo
@@ -1288,10 +539,10 @@ Public Class F1_AsientosContables
                                         Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
                                         '''''Variable Multiproposito de Lavadero
                                         tabla.Rows.Add(numiCuenta, DBNull.Value, "POR INGRESO DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Escuela, Linea)
-                                        Lb_efec.Text = Lb_efec.Text + totales
+
                                     End If
 
-                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                     total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                     If total > 0 Then  'ATC
@@ -1305,7 +556,7 @@ Public Class F1_AsientosContables
                                         tabla.Rows.Add(numicuentaatc, 11110301, "POR INGRESO ATC DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Escuela, Linea)
                                     End If
 
-                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                     total = dtserviciostotalcuentacobrar.Rows.Count
 
                                     If total > 0 Then  'TRANSFERENCIA
@@ -1327,7 +578,7 @@ Public Class F1_AsientosContables
 
                                 'If (categoria = 2) Then '''Categoria de Administracion pagos de socios y cuotas mourtorias
                                 '    '''''Variable Multiproposito de Administracion
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'Efectivo
@@ -1341,7 +592,7 @@ Public Class F1_AsientosContables
                                 '        Lb_efec.Text = Lb_efec.Text + totales
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'ATC
@@ -1354,7 +605,7 @@ Public Class F1_AsientosContables
                                 '        tabla.Rows.Add(numicuentaatc, 11110301, "POR INGRESO ATC ADMINISTRACION Y SOCIOS" + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Administracion, Linea)
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows.Count
 
                                 '    If total > 0 Then  'TRANSFERENCIA
@@ -1374,7 +625,7 @@ Public Class F1_AsientosContables
                                 'End If
 
                                 'If (categoria = 3) Then  '''Lavadero
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'Efectivo
@@ -1389,7 +640,7 @@ Public Class F1_AsientosContables
                                 '        Lb_efec.Text = Lb_efec.Text + totales
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'ATC
@@ -1403,7 +654,7 @@ Public Class F1_AsientosContables
                                 '        tabla.Rows.Add(numicuentaatc, 11110301, "POR INGRESO ATC DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Lavadero, Linea)
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows.Count
 
                                 '    If total > 0 Then  'TRANSFERENCIA
@@ -1422,7 +673,7 @@ Public Class F1_AsientosContables
                                 '    End If
                                 'End If
                                 'If (categoria = 4) Then '''''Variable Multiproposito de Remolque
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'Efectivo
@@ -1438,7 +689,7 @@ Public Class F1_AsientosContables
                                 '        Lb_efec.Text = Lb_efec.Text + totales
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'ATC
@@ -1453,7 +704,7 @@ Public Class F1_AsientosContables
                                 '        tabla.Rows.Add(numicuentaatc, 11110301, "POR INGRESO ATC DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Remolque, Linea)
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows.Count
 
                                 '    If total > 0 Then  'TRANSFERENCIA
@@ -1473,7 +724,7 @@ Public Class F1_AsientosContables
                                 'End If
 
                                 'If (categoria = -10) Then '''''Variable Multiproposito de Cabañas
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'Efectivo
@@ -1489,7 +740,7 @@ Public Class F1_AsientosContables
                                 '        Lb_efec.Text = Lb_efec.Text + totales
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'Efectivo
@@ -1504,7 +755,7 @@ Public Class F1_AsientosContables
                                 '        tabla.Rows.Add(numicuentaatc, 11110301, "POR INGRESO ATC DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Hotel, Linea)
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows.Count
 
                                 '    If total > 0 Then  'TRANSFERENCIA
@@ -1524,7 +775,7 @@ Public Class F1_AsientosContables
                                 'End If
 
                                 'If (categoria = 6) Then '''''Variable Multiproposito de 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'Efectivo
@@ -1540,7 +791,7 @@ Public Class F1_AsientosContables
                                 '        Lb_efec.Text = Lb_efec.Text + totales
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    If total > 0 Then  'ATC
@@ -1554,7 +805,7 @@ Public Class F1_AsientosContables
                                 '        tabla.Rows.Add(numicuentaatc, 11110301, "POR INGRESO ATC DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Certificacion, Linea)
                                 '    End If
 
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrartra(4, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows.Count
 
                                 '    If total > 0 Then  'TRANSFERENCIA
@@ -1574,7 +825,7 @@ Public Class F1_AsientosContables
                                 'End If
                                 'If (categoria = 7) Then '''''Variable Multiproposito de 'OJO DANNY aca ingresan por administracion
                                 '    '-----------CODIGO DANNY
-                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                                '    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                                 '    total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 '    Dim numiCuentaLicInter As Integer = 23
@@ -1617,16 +868,9 @@ Public Class F1_AsientosContables
 
 
                 Next
-                Lb_Saldo.Text = Lb_efec.Text - Lb_Banco.Text
-                If Lb_Saldo.Text <> 0 Then
-                    Lb_Saldo.ForeColor = Color.Red
-                    LabelX7.ForeColor = Color.Red
-                    btnGrabar.Enabled = False
-                Else
-                    Lb_Saldo.ForeColor = Color.Black
-                    LabelX7.ForeColor = Color.Black
-                    btnGrabar.Enabled = True
-                End If
+
+                btnGrabar.Enabled = True
+
 
                 '    If (BanderaCuentaPorCobrar = True) Then  ''''''este booleano =true me sirve para poner una sola ves en el haber las cuentas por cobrar
 
@@ -1640,14 +884,14 @@ Public Class F1_AsientosContables
 
                 '        For j As Integer = 0 To dtServicios.Rows.Count - 1 Step 1
                 '            Dim categoria As Integer = dtServicios.Rows(j).Item("cenum")
-                '            Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalPorCategoriaClientePorCobrar(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)  ''Ok
+                '            Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalPorCategoriaClientePorCobrar(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)  ''Ok
 
 
                 '            If (dtServicioTotal.Rows.Count > 0) Then
 
                 '                Dim total As Double = dtServicioTotal.Rows(0).Item("total")
                 '                If (total > 0) Then
-                '                    Dim table As DataTable = L_prListarClientePorCobrarPorSector(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                '                    Dim table As DataTable = L_prListarClientePorCobrarPorSector(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                 '                    Dim CatDiferente As Integer = -1
                 '                    For k = 0 To table.Rows.Count - 1
 
@@ -1750,7 +994,7 @@ Public Class F1_AsientosContables
                 Dim SubTotal As Double = 0
                 For j As Integer = 0 To dtServicios.Rows.Count - 1 Step 1
                     Dim categoria As Integer = dtServicios.Rows(j).Item("cenum")
-                    Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalPorCategoria(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), cbSucursal.Value)
+                    Dim dtServicioTotal As DataTable = L_prServicioObtenerTotalPorCategoria(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
                     Dim total As Double = dtServicioTotal.Rows(0).Item("total")
 
 
@@ -1895,22 +1139,7 @@ Public Class F1_AsientosContables
         'Lb_Saldo.Text = IIf(IsDBNull(aux.Compute("Sum(debe)", "")), 0, aux.Compute("Sum(debe)", ""))
         _prAplicarCondiccionJanus()
     End Sub
-    Public Sub _prAplicarCondiccionJanusBanco()
 
-
-
-
-
-        Dim fc As GridEXFormatCondition
-        fc = New GridEXFormatCondition(grAsientoBanco.RootTable.Columns("tc"), ConditionOperator.Equal, DBNull.Value)
-
-        fc.FormatStyle.FontBold = TriState.True
-        fc.FormatStyle.FontSize = 9
-        fc.FormatStyle.FontUnderline = TriState.True
-
-        grAsientoBanco.RootTable.FormatConditions.Add(fc)
-
-    End Sub
     Public Sub _prAplicarCondiccionJanus()
 
 
@@ -1950,7 +1179,8 @@ Public Class F1_AsientosContables
     End Sub
     Private Sub _prInhabiliitar()
         tbNumi.ReadOnly = True
-        btActualizar.Visible = False
+
+
         tbTipoCambio.IsInputReadOnly = True
         btnModificar.Enabled = True
         btnGrabar.Enabled = False
@@ -1958,7 +1188,7 @@ Public Class F1_AsientosContables
         btnEliminar.Enabled = True
         PanelNavegacion.Enabled = True
         btnNuevoTipoCambio.Visible = False
-        cbSucursal.ReadOnly = True
+
         conRedondeo = False
 
     End Sub
@@ -1966,7 +1196,7 @@ Public Class F1_AsientosContables
         ''  tbCliente.ReadOnly = False  por que solo podra seleccionar Cliente
         ''  tbVendedor.ReadOnly = False
         'btnGrabar.Enabled = True
-        cbSucursal.ReadOnly = False
+
         tbNumi.ReadOnly = True
         btActualizar.Visible = True
         btnNuevoTipoCambio.Visible = True
@@ -1992,26 +1222,14 @@ Public Class F1_AsientosContables
             Return False
 
         End If
-        If (Lb_Saldo.Text <> 0) Then
-            Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
-            ToastNotification.Show(Me, "Por Favor Inserte Monto Correctos en los bancos", img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
-            grbanco.Focus()
-            Return False
 
-        End If
         If (grComprobante.RowCount <= 0) Then
             Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
             ToastNotification.Show(Me, "No Existen Datos Para Guardar".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
             grComprobante.Focus()
             Return False
         End If
-        If (cbSucursal.SelectedIndex < 0) Then
-            Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
-            ToastNotification.Show(Me, "POR FAVOR SELECCIONE UNA SUCURSAL".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
-            cbSucursal.Focus()
-            Return False
 
-        End If
 
         If conRedondeo = True Then
             'validar que el redondeo no sea mas alto que el permitido by DANNY
@@ -2073,9 +1291,7 @@ Public Class F1_AsientosContables
 
         If (tbNumi.Text = String.Empty) Then
             _prGuardarModificado()
-            Lb_efec.Text = 0
-            Lb_Saldo.Text = 0
-            Lb_Banco.Text = 0
+
         Else
             'If (tbCodigo.Text <> String.Empty) Then
             '    _prGuardarModificado()
@@ -2112,10 +1328,10 @@ Public Class F1_AsientosContables
 
         'codigo danny*****************************
         Dim dtDetalle As DataTable = CType(grComprobante.DataSource, DataTable)
-        Dim dtDetalle2 As DataTable = CType(grbanco.DataSource, DataTable)
+
         Dim Reg As DataRow
 
-        dtDetalle2.Rows.Add()
+
         For Each fila As DataRow In dtDetalle.Rows
             If IsDBNull(fila.Item("debe")) = True Then
                 fila.Item("debe") = 0
@@ -2132,7 +1348,7 @@ Public Class F1_AsientosContables
         Next
         '******************************************
         Dim numiComprobante As String = ""
-        Dim res As Boolean = L_prComprobanteGrabarIntegracion(numiComprobante, "", 1, tbFechaI.Value.Year.ToString, tbFechaI.Value.Month.ToString, "", tbFechaI.Value.Date.ToString("yyyy/MM/dd"), tbTipoCambio.Value.ToString, "", "", gi_empresaNumi, dtDetalle, dtDetalle2, "", 0, tbTipoCambio.Value, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1, _ListVentas, cbSucursal.Value)
+        Dim res As Boolean = L_prComprobanteGrabarIntegracion(numiComprobante, "", 1, tbFechaI.Value.Year.ToString, tbFechaI.Value.Month.ToString, "", tbFechaI.Value.Date.ToString("yyyy/MM/dd"), tbTipoCambio.Value.ToString, "", "", gi_empresaNumi, dtDetalle, "", 0, tbTipoCambio.Value, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1, _ListVentas, 1)
         If res Then
             Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
             ToastNotification.Show(Me, "El Asiento Contable fue generado Exitosamente".ToUpper,
@@ -2181,29 +1397,15 @@ Public Class F1_AsientosContables
             tbFechaI.Value = .GetValue("iffechai")
             tbFechaF.Value = .GetValue("iffechaf")
             tbTipoCambio.Value = .GetValue("iftc")
-            cbSucursal.Value = .GetValue("ifsuc")
+
         End With
-        _prCargarBancosRegistrados(tbNumi.Text)
+
         _prCargarDetalleMovimiento(tbNumi.Text)
-        _prCargarDetalleMovimientoBanco(tbNumi.Text)
-        _prMostrarbancos(tbNumi.Text)
+
         LblPaginacion.Text = Str(grmovimientos.Row + 1) + "/" + grmovimientos.RowCount.ToString
 
     End Sub
-    Private Sub _prMostrarbancos(_Numi As String)
-        Dim dt As New DataTable
-        'Dim fila As DataRow
-        dt = L_prIntegracionBanco(_Numi)
-        Lb_Banco.Text = 0
-        Lb_efec.Text = 0
-        Lb_Saldo.Text = 0
-        If dt.Rows.Count > 0 Then
-            For Each fila As DataRow In dt.Rows
-                Lb_Banco.Text = Lb_Banco.Text + fila.Item("ikmonto")
-            Next
-            Lb_efec.Text = Lb_Banco.Text
-        End If
-    End Sub
+
     Private Sub _prSalir()
         If btnGrabar.Enabled = False Then
             _prInhabiliitar()
@@ -2246,7 +1448,7 @@ Public Class F1_AsientosContables
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         _prhabilitar()
         _prLimpiar()
-        _prCargarBancos()
+
         btnNuevo.Enabled = False
         btnModificar.Enabled = False
         btnGrabar.Enabled = True
@@ -2267,32 +1469,19 @@ Public Class F1_AsientosContables
 
         End If
 
-        If (gb_userTodasSuc = False And CType(cbSucursal.DataSource, DataTable).Rows.Count > 0) Then
-            cbSucursal.SelectedIndex = _fnObtenerPosSucursal(gi_userNumiSucursal)
-            cbSucursal.ReadOnly = True
-        Else
-            cbSucursal.ReadOnly = False
-        End If
+
     End Sub
 
     Private Sub btActualizar_Click(sender As Object, e As EventArgs) Handles btActualizar.Click
-        Lb_efec.Text = 0
-        Lb_Saldo.Text = 0
-        Lb_Banco.Text = 0
+
         If (IsNothing(tbTipoCambio.Value) Or tbTipoCambio.ToString = String.Empty Or tbTipoCambio.Value = 0) Then
             Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
             ToastNotification.Show(Me, "NO HAY TIPO DE CAMBIO REGISTRADO. POR FAVOR REGISTRE EL TIPO DE CAMBIO".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
-            cbSucursal.Focus()
+
             Return
 
         End If
-        If (cbSucursal.SelectedIndex < 0) Then
-            Dim img As Bitmap = New Bitmap(My.Resources.Mensaje, 50, 50)
-            ToastNotification.Show(Me, "POR FAVOR SELECCIONE UNA SUCURSAL".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
-            cbSucursal.Focus()
-            Return
 
-        End If
         _prCrearColumns()
 
         _prCargarTablaComprobantes()
@@ -2303,11 +1492,11 @@ Public Class F1_AsientosContables
         If (e.KeyData = Keys.Enter) Then
             If (GrDatos.Visible = True) Then
                 GrDatos.Visible = False
-                GroupPanelBanco.Visible = False
+
                 Panel2.Visible = False
             Else
                 GrDatos.Visible = True
-                GroupPanelBanco.Visible = True
+
                 Panel2.Visible = True
             End If
         End If
@@ -2348,7 +1537,7 @@ Public Class F1_AsientosContables
         objrep.SetParameterValue("tc", tbTipoCambio.Value)
         objrep.SetParameterValue("titulo", "COMPROBANTE DE INGRESO")
         objrep.SetParameterValue("titulo2", "COLEGIO ANGLO AMERICANO ") '+ gs_empresaDesc.ToUpper)
-        objrep.SetParameterValue("glosa", cbSucursal.Text)
+        objrep.SetParameterValue("glosa", "Sucursal Principal")
         'cargar el numero de comprobante
         Dim dtNum As DataTable = L_prObtenerNumFacturaGeneral(1, tbFechaI.Value.Year, tbFechaI.Value.Month, 1)
         If dtNum.Rows.Count > 0 Then
@@ -2366,36 +1555,7 @@ Public Class F1_AsientosContables
         P_Global.Visualizador.BringToFront() 'Comentar
 
     End Sub
-    Private Sub _prImprimirBanco()
-        Dim objrep As New R_ComprobanteIntegracion
-        Dim dt As New DataTable
-        dt = CType(grAsientoBanco.DataSource, DataTable)
 
-        'ahora lo mando al visualizador
-        P_Global.Visualizador = New Visualizador
-        objrep.SetDataSource(dt)
-        objrep.SetParameterValue("fecha", tbFechaI.Value.ToString("dd/MM/yyyy"))
-        objrep.SetParameterValue("tc", tbTipoCambio.Value)
-        objrep.SetParameterValue("titulo", "COMPROBANTE DE INGRESO")
-        objrep.SetParameterValue("titulo2", "COLEGIO ANGLO AMERICANO ") ' + gs_empresaDesc.ToUpper)
-        objrep.SetParameterValue("glosa", cbSucursal.Text)
-        'cargar el numero de comprobante
-        Dim dtNum As DataTable = L_prObtenerNumFacturaGeneral(1, tbFechaI.Value.Year, tbFechaI.Value.Month, 1)
-        If dtNum.Rows.Count > 0 Then
-            objrep.SetParameterValue("numero", dtNum.Rows(0).Item("oanumdoc").ToString)
-        Else
-            objrep.SetParameterValue("numero", "")
-
-        End If
-
-        objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
-
-
-        P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
-        P_Global.Visualizador.Show() 'Comentar
-        P_Global.Visualizador.BringToFront() 'Comentar
-
-    End Sub
     Private Sub _prImprimirComprobante(numiComprobante)
         Dim objrep As New R_Comprobante
         Dim dt As New DataTable
@@ -2406,8 +1566,8 @@ Public Class F1_AsientosContables
         objrep.SetDataSource(dt)
         objrep.SetParameterValue("fechaDesde", "")
         objrep.SetParameterValue("fechaHasta", "")
-        objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
-        objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
+        objrep.SetParameterValue("titulo", "Colegio Anglo Americas")
+        objrep.SetParameterValue("nit", "")
         objrep.SetParameterValue("ultimoRegistro", 0)
 
         P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
@@ -2526,58 +1686,13 @@ Public Class F1_AsientosContables
 
     End Sub
 
-    Private Sub grbanco_EditingCell(sender As Object, e As EditingCellEventArgs) Handles grbanco.EditingCell
-        'MsgBox("hola")
-        If (e.Column.Index = grbanco.RootTable.Columns("camonto").Index) Then
-            e.Cancel = False
-        Else
-            e.Cancel = True
-        End If
 
-    End Sub
 
     Private Sub GrDatos_Click(sender As Object, e As EventArgs) Handles GrDatos.Click
 
     End Sub
 
-    Private Sub grbanco_KeyDown(sender As Object, e As KeyEventArgs) Handles grbanco.KeyDown
 
-
-
-
-    End Sub
-
-    Private Sub grbanco_CurrentCellChanged(sender As Object, e As EventArgs) Handles grbanco.CurrentCellChanged
-        Pr_sumarbanco()
-    End Sub
-    Private Sub Pr_sumarbanco()
-        Dim dt As DataTable
-        dt = grbanco.DataSource
-        Lb_Banco.Text = 0
-        Dim i As Integer
-        For i = 0 To dt.Rows.Count - 1
-            Lb_Banco.Text = Lb_Banco.Text + dt.Rows(i).Item(5)
-        Next
-        Lb_Saldo.Text = Lb_efec.Text - Lb_Banco.Text
-        If Lb_Saldo.Text <> 0 Then
-            Lb_Saldo.ForeColor = Color.Red
-            LabelX7.ForeColor = Color.Red
-            btnGrabar.Enabled = False
-        Else
-            Lb_Saldo.ForeColor = Color.Black
-            LabelX7.ForeColor = Color.Black
-            btnGrabar.Enabled = True
-        End If
-
-    End Sub
-
-    Private Sub grbanco_KeyPress(sender As Object, e As KeyPressEventArgs) Handles grbanco.KeyPress
-
-    End Sub
-
-    Private Sub btnbanco_Click(sender As Object, e As EventArgs) Handles btnbanco.Click
-        _prImprimirBanco()
-    End Sub
 #End Region
 
 

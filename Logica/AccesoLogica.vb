@@ -1544,7 +1544,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
 
 
-    Public Shared Function L_prComprobanteGrabarIntegracion(ByRef _numi As String, _numDoc As String, _tipo As String, _anio As String, _mes As String, _num As String, _fecha As String, _tipoCambio As String, _glosa As String, _obs As String, _numiEmpresa As String, _detalle As DataTable, _detalle2 As DataTable, _ifnumi As String, _ifto001numi As Integer, _iftc As Double,
+    Public Shared Function L_prComprobanteGrabarIntegracion(ByRef _numi As String, _numDoc As String, _tipo As String, _anio As String, _mes As String, _num As String, _fecha As String, _tipoCambio As String, _glosa As String, _obs As String, _numiEmpresa As String, _detalle As DataTable, _ifnumi As String, _ifto001numi As Integer, _iftc As Double,
                                                             _iffechai As String, _iffechaf As String, _ifest As Integer, _dtestado As DataTable, _sucursal As Integer) As Boolean
         Dim _resultado As Boolean
 
@@ -1564,7 +1564,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@oaobs", ""))
         _listParam.Add(New Datos.DParametro("@oaemp", _numiEmpresa))
         _listParam.Add(New Datos.DParametro("@TI005", "", _detalle))
-        _listParam.Add(New Datos.DParametro("@Banco", "", _detalle2))
+
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
         '@ifnumi int =-1,@ifto001numi int=-1,@iftc decimal(18,2)=null,
         '					 @iffechai date=null,@iffechaf date=null,@ifest int=-1

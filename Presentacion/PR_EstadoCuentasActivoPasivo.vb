@@ -130,8 +130,8 @@ Public Class PR_EstadoCuentasActivoPasivo
             objrep.SetDataSource(dt)
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
-            objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
+            objrep.SetParameterValue("titulo", "COLEGIO ANGLO AMERICANO")
+            objrep.SetParameterValue("nit", "")
             MReportViewer.ReportSource = objrep
 
 

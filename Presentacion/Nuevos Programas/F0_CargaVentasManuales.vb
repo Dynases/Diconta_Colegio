@@ -73,9 +73,10 @@ Public Class F0_CargaVentasManuales
                         Dim dtalumno As DataTable = L_fnGeneralobtenerNAmeAlumno(codigoestudiante)
                         If (dtalumno.Rows.Count > 0) Then
                             estudiante = dtalumno.Rows(0).Item(0)
+                            dt.Rows.Add(codigobanco, codigoestudiante, estudiante, servicio, nameServicio, MontoDeposito, fechadeposito, nrocuota, esfactura, nrodocumento, codigocontrol, 0)
                         End If
 
-                        dt.Rows.Add(codigobanco, codigoestudiante, estudiante, servicio, nameServicio, MontoDeposito, fechadeposito, nrocuota, esfactura, nrodocumento, codigocontrol, 0)
+
                     Catch ex As Exception
                         Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
                         ToastNotification.Show(Me, "EL formato del archivo seleccionado no es el correcto. Por favor seleccione otro archivo".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)

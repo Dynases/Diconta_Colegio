@@ -513,7 +513,7 @@ Partial Class F0_Arqueo
         '
         Me.grMangueras.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grMangueras.Location = New System.Drawing.Point(0, 0)
-        Me.grMangueras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grMangueras.Margin = New System.Windows.Forms.Padding(4)
         Me.grMangueras.Name = "grMangueras"
         Me.grMangueras.Size = New System.Drawing.Size(997, 8)
         Me.grMangueras.TabIndex = 2
@@ -524,7 +524,7 @@ Partial Class F0_Arqueo
         Me.PanelDatos3.Controls.Add(Me.GroupPanel5)
         Me.PanelDatos3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelDatos3.Location = New System.Drawing.Point(0, 366)
-        Me.PanelDatos3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelDatos3.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelDatos3.Name = "PanelDatos3"
         Me.PanelDatos3.Size = New System.Drawing.Size(1003, 190)
         Me.PanelDatos3.TabIndex = 133
@@ -560,7 +560,7 @@ Partial Class F0_Arqueo
         Me.GroupPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel5.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel5.Name = "GroupPanel5"
         Me.GroupPanel5.Size = New System.Drawing.Size(1003, 190)
         '
@@ -606,7 +606,7 @@ Partial Class F0_Arqueo
         Me.tbTotalVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalVentas.Increment = 1.0R
         Me.tbTotalVentas.Location = New System.Drawing.Point(807, 28)
-        Me.tbTotalVentas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalVentas.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalVentas.MinValue = 0R
         Me.tbTotalVentas.Name = "tbTotalVentas"
         Me.tbTotalVentas.Size = New System.Drawing.Size(167, 23)
@@ -621,7 +621,7 @@ Partial Class F0_Arqueo
         Me.LabelX46.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX46.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX46.Location = New System.Drawing.Point(669, 25)
-        Me.LabelX46.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX46.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX46.Name = "LabelX46"
         Me.LabelX46.Size = New System.Drawing.Size(139, 28)
         Me.LabelX46.TabIndex = 152
@@ -639,7 +639,7 @@ Partial Class F0_Arqueo
         Me.tbTotalProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalProd.Increment = 1.0R
         Me.tbTotalProd.Location = New System.Drawing.Point(485, 28)
-        Me.tbTotalProd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalProd.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalProd.MinValue = 0R
         Me.tbTotalProd.Name = "tbTotalProd"
         Me.tbTotalProd.Size = New System.Drawing.Size(167, 23)
@@ -654,7 +654,7 @@ Partial Class F0_Arqueo
         Me.LabelX45.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX45.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX45.Location = New System.Drawing.Point(4, 113)
-        Me.LabelX45.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX45.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX45.Name = "LabelX45"
         Me.LabelX45.Size = New System.Drawing.Size(147, 28)
         Me.LabelX45.TabIndex = 151
@@ -672,7 +672,7 @@ Partial Class F0_Arqueo
         Me.tbTotalAnticipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalAnticipo.Increment = 1.0R
         Me.tbTotalAnticipo.Location = New System.Drawing.Point(155, 58)
-        Me.tbTotalAnticipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalAnticipo.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalAnticipo.MinValue = 0R
         Me.tbTotalAnticipo.Name = "tbTotalAnticipo"
         Me.tbTotalAnticipo.Size = New System.Drawing.Size(147, 23)
@@ -687,7 +687,7 @@ Partial Class F0_Arqueo
         Me.LabelX44.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX44.Location = New System.Drawing.Point(4, 57)
-        Me.LabelX44.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX44.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX44.Name = "LabelX44"
         Me.LabelX44.Size = New System.Drawing.Size(156, 28)
         Me.LabelX44.TabIndex = 148
@@ -702,7 +702,7 @@ Partial Class F0_Arqueo
         Me.LabelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX27.Location = New System.Drawing.Point(313, 107)
-        Me.LabelX27.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX27.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX27.Name = "LabelX27"
         Me.LabelX27.Size = New System.Drawing.Size(145, 17)
         Me.LabelX27.TabIndex = 147
@@ -712,7 +712,7 @@ Partial Class F0_Arqueo
         '
         Me.tbObs.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbObs.Location = New System.Drawing.Point(485, 100)
-        Me.tbObs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbObs.Margin = New System.Windows.Forms.Padding(4)
         Me.tbObs.Multiline = True
         Me.tbObs.Name = "tbObs"
         Me.tbObs.Size = New System.Drawing.Size(487, 56)
@@ -729,7 +729,7 @@ Partial Class F0_Arqueo
         Me.tbDescuadre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbDescuadre.Increment = 1.0R
         Me.tbDescuadre.Location = New System.Drawing.Point(807, 57)
-        Me.tbDescuadre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbDescuadre.Margin = New System.Windows.Forms.Padding(4)
         Me.tbDescuadre.Name = "tbDescuadre"
         Me.tbDescuadre.Size = New System.Drawing.Size(167, 23)
         Me.tbDescuadre.TabIndex = 145
@@ -743,7 +743,7 @@ Partial Class F0_Arqueo
         Me.LabelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX26.Location = New System.Drawing.Point(617, 55)
-        Me.LabelX26.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX26.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX26.Name = "LabelX26"
         Me.LabelX26.Size = New System.Drawing.Size(199, 28)
         Me.LabelX26.TabIndex = 144
@@ -761,7 +761,7 @@ Partial Class F0_Arqueo
         Me.tbTotalSumado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalSumado.Increment = 1.0R
         Me.tbTotalSumado.Location = New System.Drawing.Point(807, 1)
-        Me.tbTotalSumado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalSumado.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalSumado.MinValue = 0R
         Me.tbTotalSumado.Name = "tbTotalSumado"
         Me.tbTotalSumado.Size = New System.Drawing.Size(167, 23)
@@ -776,7 +776,7 @@ Partial Class F0_Arqueo
         Me.LabelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX25.Location = New System.Drawing.Point(669, -4)
-        Me.LabelX25.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX25.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX25.Name = "LabelX25"
         Me.LabelX25.Size = New System.Drawing.Size(156, 28)
         Me.LabelX25.TabIndex = 141
@@ -794,7 +794,7 @@ Partial Class F0_Arqueo
         Me.tbTotalCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalCredito.Increment = 1.0R
         Me.tbTotalCredito.Location = New System.Drawing.Point(155, 30)
-        Me.tbTotalCredito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalCredito.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalCredito.MinValue = 0R
         Me.tbTotalCredito.Name = "tbTotalCredito"
         Me.tbTotalCredito.Size = New System.Drawing.Size(147, 23)
@@ -809,7 +809,7 @@ Partial Class F0_Arqueo
         Me.LabelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX24.Location = New System.Drawing.Point(4, 1)
-        Me.LabelX24.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX24.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX24.Name = "LabelX24"
         Me.LabelX24.Size = New System.Drawing.Size(147, 28)
         Me.LabelX24.TabIndex = 139
@@ -827,7 +827,7 @@ Partial Class F0_Arqueo
         Me.tbTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotal.Increment = 1.0R
         Me.tbTotal.Location = New System.Drawing.Point(485, 1)
-        Me.tbTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotal.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotal.MinValue = 0R
         Me.tbTotal.Name = "tbTotal"
         Me.tbTotal.Size = New System.Drawing.Size(167, 23)
@@ -842,7 +842,7 @@ Partial Class F0_Arqueo
         Me.LabelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX23.Location = New System.Drawing.Point(313, 1)
-        Me.LabelX23.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX23.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX23.Name = "LabelX23"
         Me.LabelX23.Size = New System.Drawing.Size(155, 28)
         Me.LabelX23.TabIndex = 136
@@ -860,7 +860,7 @@ Partial Class F0_Arqueo
         Me.tbTotalDol.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalDol.Increment = 1.0R
         Me.tbTotalDol.Location = New System.Drawing.Point(155, 114)
-        Me.tbTotalDol.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalDol.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalDol.MinValue = 0R
         Me.tbTotalDol.Name = "tbTotalDol"
         Me.tbTotalDol.Size = New System.Drawing.Size(147, 23)
@@ -875,7 +875,7 @@ Partial Class F0_Arqueo
         Me.LabelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX14.Location = New System.Drawing.Point(313, 26)
-        Me.LabelX14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX14.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX14.Name = "LabelX14"
         Me.LabelX14.Size = New System.Drawing.Size(171, 28)
         Me.LabelX14.TabIndex = 134
@@ -893,7 +893,7 @@ Partial Class F0_Arqueo
         Me.tbTotalTarjeta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalTarjeta.Increment = 1.0R
         Me.tbTotalTarjeta.Location = New System.Drawing.Point(155, 87)
-        Me.tbTotalTarjeta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalTarjeta.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalTarjeta.MinValue = 0R
         Me.tbTotalTarjeta.Name = "tbTotalTarjeta"
         Me.tbTotalTarjeta.Size = New System.Drawing.Size(147, 23)
@@ -911,7 +911,7 @@ Partial Class F0_Arqueo
         Me.tbTotalEfec.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotalEfec.Increment = 1.0R
         Me.tbTotalEfec.Location = New System.Drawing.Point(155, 1)
-        Me.tbTotalEfec.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotalEfec.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotalEfec.MinValue = 0R
         Me.tbTotalEfec.Name = "tbTotalEfec"
         Me.tbTotalEfec.Size = New System.Drawing.Size(147, 23)
@@ -926,7 +926,7 @@ Partial Class F0_Arqueo
         Me.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX15.Location = New System.Drawing.Point(4, 84)
-        Me.LabelX15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX15.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX15.Name = "LabelX15"
         Me.LabelX15.Size = New System.Drawing.Size(156, 28)
         Me.LabelX15.TabIndex = 131
@@ -941,7 +941,7 @@ Partial Class F0_Arqueo
         Me.LabelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX16.Location = New System.Drawing.Point(4, 33)
-        Me.LabelX16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX16.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX16.Name = "LabelX16"
         Me.LabelX16.Size = New System.Drawing.Size(156, 20)
         Me.LabelX16.TabIndex = 118
@@ -953,7 +953,7 @@ Partial Class F0_Arqueo
         Me.gpMangueras34.Controls.Add(Me.gpMan3)
         Me.gpMangueras34.Dock = System.Windows.Forms.DockStyle.Top
         Me.gpMangueras34.Location = New System.Drawing.Point(0, 269)
-        Me.gpMangueras34.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpMangueras34.Margin = New System.Windows.Forms.Padding(4)
         Me.gpMangueras34.Name = "gpMangueras34"
         Me.gpMangueras34.Size = New System.Drawing.Size(1003, 174)
         Me.gpMangueras34.TabIndex = 134
@@ -984,7 +984,7 @@ Partial Class F0_Arqueo
         Me.gpMan4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gpMan4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpMan4.Location = New System.Drawing.Point(501, 0)
-        Me.gpMan4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpMan4.Margin = New System.Windows.Forms.Padding(4)
         Me.gpMan4.Name = "gpMan4"
         Me.gpMan4.Size = New System.Drawing.Size(502, 174)
         '
@@ -1029,7 +1029,7 @@ Partial Class F0_Arqueo
         Me.tbCali4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCali4.Increment = 1.0R
         Me.tbCali4.Location = New System.Drawing.Point(312, 64)
-        Me.tbCali4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCali4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCali4.MinValue = 0R
         Me.tbCali4.Name = "tbCali4"
         Me.tbCali4.Size = New System.Drawing.Size(167, 22)
@@ -1044,7 +1044,7 @@ Partial Class F0_Arqueo
         Me.LabelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX50.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX50.Location = New System.Drawing.Point(207, 63)
-        Me.LabelX50.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX50.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX50.Name = "LabelX50"
         Me.LabelX50.Size = New System.Drawing.Size(139, 28)
         Me.LabelX50.TabIndex = 148
@@ -1059,7 +1059,7 @@ Partial Class F0_Arqueo
         Me.tbMan4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbMan4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMan4.Location = New System.Drawing.Point(9, 33)
-        Me.tbMan4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMan4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMan4.Name = "tbMan4"
         Me.tbMan4.PreventEnterBeep = True
         Me.tbMan4.Size = New System.Drawing.Size(167, 22)
@@ -1074,7 +1074,7 @@ Partial Class F0_Arqueo
         Me.tbCombustible4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCombustible4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCombustible4.Location = New System.Drawing.Point(9, 89)
-        Me.tbCombustible4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCombustible4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCombustible4.Name = "tbCombustible4"
         Me.tbCombustible4.PreventEnterBeep = True
         Me.tbCombustible4.Size = New System.Drawing.Size(167, 22)
@@ -1089,7 +1089,7 @@ Partial Class F0_Arqueo
         Me.LabelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX28.Location = New System.Drawing.Point(9, 60)
-        Me.LabelX28.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX28.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX28.Name = "LabelX28"
         Me.LabelX28.Size = New System.Drawing.Size(137, 28)
         Me.LabelX28.TabIndex = 145
@@ -1106,7 +1106,7 @@ Partial Class F0_Arqueo
         Me.tbPrecio4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbPrecio4.Increment = 1.0R
         Me.tbPrecio4.Location = New System.Drawing.Point(69, 122)
-        Me.tbPrecio4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbPrecio4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPrecio4.MinValue = 0R
         Me.tbPrecio4.Name = "tbPrecio4"
         Me.tbPrecio4.Size = New System.Drawing.Size(107, 22)
@@ -1121,7 +1121,7 @@ Partial Class F0_Arqueo
         Me.LabelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX30.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX30.Location = New System.Drawing.Point(9, 122)
-        Me.LabelX30.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX30.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX30.Name = "LabelX30"
         Me.LabelX30.Size = New System.Drawing.Size(101, 28)
         Me.LabelX30.TabIndex = 142
@@ -1138,7 +1138,7 @@ Partial Class F0_Arqueo
         Me.tbMitTotal4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMitTotal4.Increment = 1.0R
         Me.tbMitTotal4.Location = New System.Drawing.Point(312, 94)
-        Me.tbMitTotal4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMitTotal4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMitTotal4.MinValue = 0R
         Me.tbMitTotal4.Name = "tbMitTotal4"
         Me.tbMitTotal4.Size = New System.Drawing.Size(167, 22)
@@ -1153,7 +1153,7 @@ Partial Class F0_Arqueo
         Me.LabelX31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX31.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX31.Location = New System.Drawing.Point(205, 94)
-        Me.LabelX31.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX31.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX31.Name = "LabelX31"
         Me.LabelX31.Size = New System.Drawing.Size(101, 28)
         Me.LabelX31.TabIndex = 140
@@ -1171,7 +1171,7 @@ Partial Class F0_Arqueo
         Me.tbTotal4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotal4.Increment = 1.0R
         Me.tbTotal4.Location = New System.Drawing.Point(312, 124)
-        Me.tbTotal4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotal4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotal4.MinValue = 0R
         Me.tbTotal4.Name = "tbTotal4"
         Me.tbTotal4.Size = New System.Drawing.Size(167, 22)
@@ -1186,7 +1186,7 @@ Partial Class F0_Arqueo
         Me.LabelX32.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX32.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX32.Location = New System.Drawing.Point(205, 124)
-        Me.LabelX32.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX32.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX32.Name = "LabelX32"
         Me.LabelX32.Size = New System.Drawing.Size(101, 28)
         Me.LabelX32.TabIndex = 134
@@ -1205,7 +1205,7 @@ Partial Class F0_Arqueo
         Me.tbFin4.ForeColor = System.Drawing.Color.White
         Me.tbFin4.Increment = 1.0R
         Me.tbFin4.Location = New System.Drawing.Point(312, 34)
-        Me.tbFin4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFin4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFin4.MinValue = 0R
         Me.tbFin4.Name = "tbFin4"
         Me.tbFin4.Size = New System.Drawing.Size(167, 22)
@@ -1222,7 +1222,7 @@ Partial Class F0_Arqueo
         Me.tbIni4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbIni4.Increment = 1.0R
         Me.tbIni4.Location = New System.Drawing.Point(312, 4)
-        Me.tbIni4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbIni4.Margin = New System.Windows.Forms.Padding(4)
         Me.tbIni4.MinValue = 0R
         Me.tbIni4.Name = "tbIni4"
         Me.tbIni4.Size = New System.Drawing.Size(167, 22)
@@ -1237,7 +1237,7 @@ Partial Class F0_Arqueo
         Me.LabelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX33.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX33.Location = New System.Drawing.Point(205, 33)
-        Me.LabelX33.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX33.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX33.Name = "LabelX33"
         Me.LabelX33.Size = New System.Drawing.Size(101, 28)
         Me.LabelX33.TabIndex = 131
@@ -1252,7 +1252,7 @@ Partial Class F0_Arqueo
         Me.LabelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX34.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX34.Location = New System.Drawing.Point(205, 4)
-        Me.LabelX34.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX34.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX34.Name = "LabelX34"
         Me.LabelX34.Size = New System.Drawing.Size(101, 28)
         Me.LabelX34.TabIndex = 118
@@ -1267,7 +1267,7 @@ Partial Class F0_Arqueo
         Me.LabelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX35.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX35.Location = New System.Drawing.Point(9, 4)
-        Me.LabelX35.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX35.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX35.Name = "LabelX35"
         Me.LabelX35.Size = New System.Drawing.Size(87, 28)
         Me.LabelX35.TabIndex = 110
@@ -1298,7 +1298,7 @@ Partial Class F0_Arqueo
         Me.gpMan3.Dock = System.Windows.Forms.DockStyle.Left
         Me.gpMan3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpMan3.Location = New System.Drawing.Point(0, 0)
-        Me.gpMan3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpMan3.Margin = New System.Windows.Forms.Padding(4)
         Me.gpMan3.Name = "gpMan3"
         Me.gpMan3.Size = New System.Drawing.Size(501, 174)
         '
@@ -1343,7 +1343,7 @@ Partial Class F0_Arqueo
         Me.tbCali3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCali3.Increment = 1.0R
         Me.tbCali3.Location = New System.Drawing.Point(309, 64)
-        Me.tbCali3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCali3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCali3.MinValue = 0R
         Me.tbCali3.Name = "tbCali3"
         Me.tbCali3.Size = New System.Drawing.Size(167, 22)
@@ -1358,7 +1358,7 @@ Partial Class F0_Arqueo
         Me.LabelX49.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX49.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX49.Location = New System.Drawing.Point(204, 63)
-        Me.LabelX49.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX49.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX49.Name = "LabelX49"
         Me.LabelX49.Size = New System.Drawing.Size(139, 28)
         Me.LabelX49.TabIndex = 146
@@ -1373,7 +1373,7 @@ Partial Class F0_Arqueo
         Me.tbMan3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbMan3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMan3.Location = New System.Drawing.Point(4, 33)
-        Me.tbMan3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMan3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMan3.Name = "tbMan3"
         Me.tbMan3.PreventEnterBeep = True
         Me.tbMan3.Size = New System.Drawing.Size(167, 22)
@@ -1388,7 +1388,7 @@ Partial Class F0_Arqueo
         Me.tbCombustible3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCombustible3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCombustible3.Location = New System.Drawing.Point(4, 89)
-        Me.tbCombustible3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCombustible3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCombustible3.Name = "tbCombustible3"
         Me.tbCombustible3.PreventEnterBeep = True
         Me.tbCombustible3.Size = New System.Drawing.Size(167, 22)
@@ -1403,7 +1403,7 @@ Partial Class F0_Arqueo
         Me.LabelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX36.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX36.Location = New System.Drawing.Point(4, 62)
-        Me.LabelX36.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX36.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX36.Name = "LabelX36"
         Me.LabelX36.Size = New System.Drawing.Size(137, 28)
         Me.LabelX36.TabIndex = 141
@@ -1420,7 +1420,7 @@ Partial Class F0_Arqueo
         Me.tbPrecio3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbPrecio3.Increment = 1.0R
         Me.tbPrecio3.Location = New System.Drawing.Point(72, 122)
-        Me.tbPrecio3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbPrecio3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPrecio3.MinValue = 0R
         Me.tbPrecio3.Name = "tbPrecio3"
         Me.tbPrecio3.Size = New System.Drawing.Size(100, 22)
@@ -1435,7 +1435,7 @@ Partial Class F0_Arqueo
         Me.LabelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX37.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX37.Location = New System.Drawing.Point(5, 119)
-        Me.LabelX37.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX37.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX37.Name = "LabelX37"
         Me.LabelX37.Size = New System.Drawing.Size(139, 28)
         Me.LabelX37.TabIndex = 138
@@ -1452,7 +1452,7 @@ Partial Class F0_Arqueo
         Me.tbMitTotal3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMitTotal3.Increment = 1.0R
         Me.tbMitTotal3.Location = New System.Drawing.Point(309, 95)
-        Me.tbMitTotal3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMitTotal3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMitTotal3.MinValue = 0R
         Me.tbMitTotal3.Name = "tbMitTotal3"
         Me.tbMitTotal3.Size = New System.Drawing.Size(167, 22)
@@ -1467,7 +1467,7 @@ Partial Class F0_Arqueo
         Me.LabelX38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX38.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX38.Location = New System.Drawing.Point(204, 94)
-        Me.LabelX38.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX38.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX38.Name = "LabelX38"
         Me.LabelX38.Size = New System.Drawing.Size(139, 28)
         Me.LabelX38.TabIndex = 136
@@ -1485,7 +1485,7 @@ Partial Class F0_Arqueo
         Me.tbTotal3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotal3.Increment = 1.0R
         Me.tbTotal3.Location = New System.Drawing.Point(309, 124)
-        Me.tbTotal3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotal3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotal3.MinValue = 0R
         Me.tbTotal3.Name = "tbTotal3"
         Me.tbTotal3.Size = New System.Drawing.Size(167, 22)
@@ -1500,7 +1500,7 @@ Partial Class F0_Arqueo
         Me.LabelX39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX39.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX39.Location = New System.Drawing.Point(204, 122)
-        Me.LabelX39.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX39.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX39.Name = "LabelX39"
         Me.LabelX39.Size = New System.Drawing.Size(139, 28)
         Me.LabelX39.TabIndex = 134
@@ -1519,7 +1519,7 @@ Partial Class F0_Arqueo
         Me.tbFin3.ForeColor = System.Drawing.Color.White
         Me.tbFin3.Increment = 1.0R
         Me.tbFin3.Location = New System.Drawing.Point(309, 34)
-        Me.tbFin3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFin3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFin3.MinValue = 0R
         Me.tbFin3.Name = "tbFin3"
         Me.tbFin3.Size = New System.Drawing.Size(167, 22)
@@ -1536,7 +1536,7 @@ Partial Class F0_Arqueo
         Me.tbIni3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbIni3.Increment = 1.0R
         Me.tbIni3.Location = New System.Drawing.Point(309, 4)
-        Me.tbIni3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbIni3.Margin = New System.Windows.Forms.Padding(4)
         Me.tbIni3.MinValue = 0R
         Me.tbIni3.Name = "tbIni3"
         Me.tbIni3.Size = New System.Drawing.Size(167, 22)
@@ -1551,7 +1551,7 @@ Partial Class F0_Arqueo
         Me.LabelX40.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX40.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX40.Location = New System.Drawing.Point(204, 32)
-        Me.LabelX40.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX40.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX40.Name = "LabelX40"
         Me.LabelX40.Size = New System.Drawing.Size(139, 28)
         Me.LabelX40.TabIndex = 131
@@ -1566,7 +1566,7 @@ Partial Class F0_Arqueo
         Me.LabelX41.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX41.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX41.Location = New System.Drawing.Point(204, 4)
-        Me.LabelX41.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX41.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX41.Name = "LabelX41"
         Me.LabelX41.Size = New System.Drawing.Size(139, 28)
         Me.LabelX41.TabIndex = 118
@@ -1581,7 +1581,7 @@ Partial Class F0_Arqueo
         Me.LabelX42.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX42.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX42.Location = New System.Drawing.Point(4, 4)
-        Me.LabelX42.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX42.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX42.Name = "LabelX42"
         Me.LabelX42.Size = New System.Drawing.Size(124, 28)
         Me.LabelX42.TabIndex = 110
@@ -1593,7 +1593,7 @@ Partial Class F0_Arqueo
         Me.gpMangueras12.Controls.Add(Me.gpMan1)
         Me.gpMangueras12.Dock = System.Windows.Forms.DockStyle.Top
         Me.gpMangueras12.Location = New System.Drawing.Point(0, 95)
-        Me.gpMangueras12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpMangueras12.Margin = New System.Windows.Forms.Padding(4)
         Me.gpMangueras12.Name = "gpMangueras12"
         Me.gpMangueras12.Size = New System.Drawing.Size(1003, 174)
         Me.gpMangueras12.TabIndex = 132
@@ -1624,7 +1624,7 @@ Partial Class F0_Arqueo
         Me.gpMan2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gpMan2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpMan2.Location = New System.Drawing.Point(501, 0)
-        Me.gpMan2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpMan2.Margin = New System.Windows.Forms.Padding(4)
         Me.gpMan2.Name = "gpMan2"
         Me.gpMan2.Size = New System.Drawing.Size(502, 174)
         '
@@ -1670,7 +1670,7 @@ Partial Class F0_Arqueo
         Me.tbCali2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCali2.Increment = 1.0R
         Me.tbCali2.Location = New System.Drawing.Point(312, 65)
-        Me.tbCali2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCali2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCali2.MinValue = 0R
         Me.tbCali2.Name = "tbCali2"
         Me.tbCali2.Size = New System.Drawing.Size(167, 22)
@@ -1685,7 +1685,7 @@ Partial Class F0_Arqueo
         Me.LabelX48.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX48.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX48.Location = New System.Drawing.Point(205, 65)
-        Me.LabelX48.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX48.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX48.Name = "LabelX48"
         Me.LabelX48.Size = New System.Drawing.Size(101, 28)
         Me.LabelX48.TabIndex = 148
@@ -1700,7 +1700,7 @@ Partial Class F0_Arqueo
         Me.tbMan2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbMan2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMan2.Location = New System.Drawing.Point(9, 31)
-        Me.tbMan2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMan2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMan2.Name = "tbMan2"
         Me.tbMan2.PreventEnterBeep = True
         Me.tbMan2.Size = New System.Drawing.Size(167, 22)
@@ -1715,7 +1715,7 @@ Partial Class F0_Arqueo
         Me.tbCombustible2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCombustible2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCombustible2.Location = New System.Drawing.Point(9, 89)
-        Me.tbCombustible2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCombustible2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCombustible2.Name = "tbCombustible2"
         Me.tbCombustible2.PreventEnterBeep = True
         Me.tbCombustible2.Size = New System.Drawing.Size(167, 22)
@@ -1730,7 +1730,7 @@ Partial Class F0_Arqueo
         Me.LabelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX22.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX22.Location = New System.Drawing.Point(9, 60)
-        Me.LabelX22.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX22.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX22.Name = "LabelX22"
         Me.LabelX22.Size = New System.Drawing.Size(137, 28)
         Me.LabelX22.TabIndex = 145
@@ -1747,7 +1747,7 @@ Partial Class F0_Arqueo
         Me.tbPrecio2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbPrecio2.Increment = 1.0R
         Me.tbPrecio2.Location = New System.Drawing.Point(69, 121)
-        Me.tbPrecio2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbPrecio2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPrecio2.MinValue = 0R
         Me.tbPrecio2.Name = "tbPrecio2"
         Me.tbPrecio2.Size = New System.Drawing.Size(107, 22)
@@ -1762,7 +1762,7 @@ Partial Class F0_Arqueo
         Me.LabelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX19.Location = New System.Drawing.Point(9, 116)
-        Me.LabelX19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX19.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX19.Name = "LabelX19"
         Me.LabelX19.Size = New System.Drawing.Size(101, 28)
         Me.LabelX19.TabIndex = 142
@@ -1779,7 +1779,7 @@ Partial Class F0_Arqueo
         Me.tbMitTotal2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMitTotal2.Increment = 1.0R
         Me.tbMitTotal2.Location = New System.Drawing.Point(312, 95)
-        Me.tbMitTotal2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMitTotal2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMitTotal2.MinValue = 0R
         Me.tbMitTotal2.Name = "tbMitTotal2"
         Me.tbMitTotal2.Size = New System.Drawing.Size(167, 22)
@@ -1794,7 +1794,7 @@ Partial Class F0_Arqueo
         Me.LabelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX20.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX20.Location = New System.Drawing.Point(205, 95)
-        Me.LabelX20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX20.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX20.Name = "LabelX20"
         Me.LabelX20.Size = New System.Drawing.Size(101, 28)
         Me.LabelX20.TabIndex = 140
@@ -1812,7 +1812,7 @@ Partial Class F0_Arqueo
         Me.tbTotal2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotal2.Increment = 1.0R
         Me.tbTotal2.Location = New System.Drawing.Point(312, 124)
-        Me.tbTotal2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotal2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotal2.MinValue = 0R
         Me.tbTotal2.Name = "tbTotal2"
         Me.tbTotal2.Size = New System.Drawing.Size(167, 22)
@@ -1827,7 +1827,7 @@ Partial Class F0_Arqueo
         Me.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX10.Location = New System.Drawing.Point(205, 124)
-        Me.LabelX10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX10.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX10.Name = "LabelX10"
         Me.LabelX10.Size = New System.Drawing.Size(101, 28)
         Me.LabelX10.TabIndex = 134
@@ -1846,7 +1846,7 @@ Partial Class F0_Arqueo
         Me.tbFin2.ForeColor = System.Drawing.Color.White
         Me.tbFin2.Increment = 1.0R
         Me.tbFin2.Location = New System.Drawing.Point(312, 34)
-        Me.tbFin2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFin2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFin2.MinValue = 0R
         Me.tbFin2.Name = "tbFin2"
         Me.tbFin2.Size = New System.Drawing.Size(167, 22)
@@ -1863,7 +1863,7 @@ Partial Class F0_Arqueo
         Me.tbIni2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbIni2.Increment = 1.0R
         Me.tbIni2.Location = New System.Drawing.Point(312, 4)
-        Me.tbIni2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbIni2.Margin = New System.Windows.Forms.Padding(4)
         Me.tbIni2.MinValue = 0R
         Me.tbIni2.Name = "tbIni2"
         Me.tbIni2.Size = New System.Drawing.Size(167, 22)
@@ -1878,7 +1878,7 @@ Partial Class F0_Arqueo
         Me.LabelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX11.Location = New System.Drawing.Point(205, 33)
-        Me.LabelX11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX11.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX11.Name = "LabelX11"
         Me.LabelX11.Size = New System.Drawing.Size(101, 28)
         Me.LabelX11.TabIndex = 131
@@ -1893,7 +1893,7 @@ Partial Class F0_Arqueo
         Me.LabelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX12.Location = New System.Drawing.Point(205, 4)
-        Me.LabelX12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX12.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX12.Name = "LabelX12"
         Me.LabelX12.Size = New System.Drawing.Size(101, 28)
         Me.LabelX12.TabIndex = 118
@@ -1908,7 +1908,7 @@ Partial Class F0_Arqueo
         Me.LabelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX13.Location = New System.Drawing.Point(9, 4)
-        Me.LabelX13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX13.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX13.Name = "LabelX13"
         Me.LabelX13.Size = New System.Drawing.Size(87, 28)
         Me.LabelX13.TabIndex = 110
@@ -1939,7 +1939,7 @@ Partial Class F0_Arqueo
         Me.gpMan1.Dock = System.Windows.Forms.DockStyle.Left
         Me.gpMan1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gpMan1.Location = New System.Drawing.Point(0, 0)
-        Me.gpMan1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpMan1.Margin = New System.Windows.Forms.Padding(4)
         Me.gpMan1.Name = "gpMan1"
         Me.gpMan1.Size = New System.Drawing.Size(501, 174)
         '
@@ -1985,7 +1985,7 @@ Partial Class F0_Arqueo
         Me.tbCali1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCali1.Increment = 1.0R
         Me.tbCali1.Location = New System.Drawing.Point(309, 64)
-        Me.tbCali1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCali1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCali1.MinValue = 0R
         Me.tbCali1.Name = "tbCali1"
         Me.tbCali1.Size = New System.Drawing.Size(167, 22)
@@ -2000,7 +2000,7 @@ Partial Class F0_Arqueo
         Me.LabelX47.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX47.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX47.Location = New System.Drawing.Point(204, 63)
-        Me.LabelX47.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX47.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX47.Name = "LabelX47"
         Me.LabelX47.Size = New System.Drawing.Size(139, 28)
         Me.LabelX47.TabIndex = 144
@@ -2015,7 +2015,7 @@ Partial Class F0_Arqueo
         Me.tbMan1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbMan1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMan1.Location = New System.Drawing.Point(5, 27)
-        Me.tbMan1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMan1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMan1.Name = "tbMan1"
         Me.tbMan1.PreventEnterBeep = True
         Me.tbMan1.Size = New System.Drawing.Size(167, 22)
@@ -2030,7 +2030,7 @@ Partial Class F0_Arqueo
         Me.tbCombustible1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCombustible1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCombustible1.Location = New System.Drawing.Point(4, 85)
-        Me.tbCombustible1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCombustible1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCombustible1.Name = "tbCombustible1"
         Me.tbCombustible1.PreventEnterBeep = True
         Me.tbCombustible1.Size = New System.Drawing.Size(167, 22)
@@ -2045,7 +2045,7 @@ Partial Class F0_Arqueo
         Me.LabelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX21.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX21.Location = New System.Drawing.Point(4, 58)
-        Me.LabelX21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX21.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX21.Name = "LabelX21"
         Me.LabelX21.Size = New System.Drawing.Size(137, 28)
         Me.LabelX21.TabIndex = 141
@@ -2062,7 +2062,7 @@ Partial Class F0_Arqueo
         Me.tbPrecio1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbPrecio1.Increment = 1.0R
         Me.tbPrecio1.Location = New System.Drawing.Point(72, 116)
-        Me.tbPrecio1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbPrecio1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPrecio1.MinValue = 0R
         Me.tbPrecio1.Name = "tbPrecio1"
         Me.tbPrecio1.Size = New System.Drawing.Size(100, 22)
@@ -2077,7 +2077,7 @@ Partial Class F0_Arqueo
         Me.LabelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX18.Location = New System.Drawing.Point(5, 116)
-        Me.LabelX18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX18.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX18.Name = "LabelX18"
         Me.LabelX18.Size = New System.Drawing.Size(71, 28)
         Me.LabelX18.TabIndex = 138
@@ -2094,7 +2094,7 @@ Partial Class F0_Arqueo
         Me.tbMitTotal1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMitTotal1.Increment = 1.0R
         Me.tbMitTotal1.Location = New System.Drawing.Point(309, 95)
-        Me.tbMitTotal1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMitTotal1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMitTotal1.MinValue = 0R
         Me.tbMitTotal1.Name = "tbMitTotal1"
         Me.tbMitTotal1.Size = New System.Drawing.Size(167, 22)
@@ -2109,7 +2109,7 @@ Partial Class F0_Arqueo
         Me.LabelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX17.Location = New System.Drawing.Point(204, 94)
-        Me.LabelX17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX17.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX17.Name = "LabelX17"
         Me.LabelX17.Size = New System.Drawing.Size(139, 28)
         Me.LabelX17.TabIndex = 136
@@ -2127,7 +2127,7 @@ Partial Class F0_Arqueo
         Me.tbTotal1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTotal1.Increment = 1.0R
         Me.tbTotal1.Location = New System.Drawing.Point(309, 124)
-        Me.tbTotal1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTotal1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTotal1.MinValue = 0R
         Me.tbTotal1.Name = "tbTotal1"
         Me.tbTotal1.Size = New System.Drawing.Size(167, 22)
@@ -2142,7 +2142,7 @@ Partial Class F0_Arqueo
         Me.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX8.Location = New System.Drawing.Point(204, 122)
-        Me.LabelX8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX8.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX8.Name = "LabelX8"
         Me.LabelX8.Size = New System.Drawing.Size(139, 28)
         Me.LabelX8.TabIndex = 134
@@ -2161,7 +2161,7 @@ Partial Class F0_Arqueo
         Me.tbFin1.ForeColor = System.Drawing.Color.White
         Me.tbFin1.Increment = 1.0R
         Me.tbFin1.Location = New System.Drawing.Point(309, 34)
-        Me.tbFin1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFin1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFin1.MinValue = 0R
         Me.tbFin1.Name = "tbFin1"
         Me.tbFin1.Size = New System.Drawing.Size(167, 22)
@@ -2178,7 +2178,7 @@ Partial Class F0_Arqueo
         Me.tbIni1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbIni1.Increment = 1.0R
         Me.tbIni1.Location = New System.Drawing.Point(309, 4)
-        Me.tbIni1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbIni1.Margin = New System.Windows.Forms.Padding(4)
         Me.tbIni1.MinValue = 0R
         Me.tbIni1.Name = "tbIni1"
         Me.tbIni1.Size = New System.Drawing.Size(167, 22)
@@ -2193,7 +2193,7 @@ Partial Class F0_Arqueo
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX5.Location = New System.Drawing.Point(204, 32)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(139, 28)
         Me.LabelX5.TabIndex = 131
@@ -2208,7 +2208,7 @@ Partial Class F0_Arqueo
         Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX7.Location = New System.Drawing.Point(204, 4)
-        Me.LabelX7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX7.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX7.Name = "LabelX7"
         Me.LabelX7.Size = New System.Drawing.Size(139, 28)
         Me.LabelX7.TabIndex = 118
@@ -2223,7 +2223,7 @@ Partial Class F0_Arqueo
         Me.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX9.Location = New System.Drawing.Point(4, 4)
-        Me.LabelX9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX9.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX9.Name = "LabelX9"
         Me.LabelX9.Size = New System.Drawing.Size(124, 16)
         Me.LabelX9.TabIndex = 110
@@ -2235,7 +2235,7 @@ Partial Class F0_Arqueo
         Me.PanelDatos1.Controls.Add(Me.GroupPanel2)
         Me.PanelDatos1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelDatos1.Location = New System.Drawing.Point(0, 0)
-        Me.PanelDatos1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelDatos1.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelDatos1.Name = "PanelDatos1"
         Me.PanelDatos1.Size = New System.Drawing.Size(1003, 95)
         Me.PanelDatos1.TabIndex = 0
@@ -2264,7 +2264,7 @@ Partial Class F0_Arqueo
         Me.GroupPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel2.Name = "GroupPanel2"
         Me.GroupPanel2.Size = New System.Drawing.Size(1003, 95)
         '
@@ -2305,7 +2305,7 @@ Partial Class F0_Arqueo
         Me.btnNuevoTipoCambio.Image = Global.Presentacion.My.Resources.Resources.anadir
         Me.btnNuevoTipoCambio.ImageFixedSize = New System.Drawing.Size(28, 28)
         Me.btnNuevoTipoCambio.Location = New System.Drawing.Point(731, 50)
-        Me.btnNuevoTipoCambio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNuevoTipoCambio.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNuevoTipoCambio.Name = "btnNuevoTipoCambio"
         Me.btnNuevoTipoCambio.Size = New System.Drawing.Size(45, 36)
         Me.btnNuevoTipoCambio.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -2321,7 +2321,7 @@ Partial Class F0_Arqueo
         Me.tbNumi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNumi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbNumi.Location = New System.Drawing.Point(91, 2)
-        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4)
         Me.tbNumi.Name = "tbNumi"
         Me.tbNumi.PreventEnterBeep = True
         Me.tbNumi.Size = New System.Drawing.Size(96, 22)
@@ -2334,7 +2334,7 @@ Partial Class F0_Arqueo
         Me.tbCajero.DesignTimeLayout = tbCajero_DesignTimeLayout
         Me.tbCajero.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbCajero.Location = New System.Drawing.Point(91, 62)
-        Me.tbCajero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCajero.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCajero.Name = "tbCajero"
         Me.tbCajero.SelectedIndex = -1
         Me.tbCajero.SelectedItem = Nothing
@@ -2350,7 +2350,7 @@ Partial Class F0_Arqueo
         Me.LabelX43.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX43.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX43.Location = New System.Drawing.Point(5, 60)
-        Me.LabelX43.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX43.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX43.Name = "LabelX43"
         Me.LabelX43.Size = New System.Drawing.Size(109, 28)
         Me.LabelX43.TabIndex = 146
@@ -2362,7 +2362,7 @@ Partial Class F0_Arqueo
         Me.tbMaquina.DesignTimeLayout = tbMaquina_DesignTimeLayout
         Me.tbMaquina.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbMaquina.Location = New System.Drawing.Point(571, 62)
-        Me.tbMaquina.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMaquina.Margin = New System.Windows.Forms.Padding(4)
         Me.tbMaquina.Name = "tbMaquina"
         Me.tbMaquina.SelectedIndex = -1
         Me.tbMaquina.SelectedItem = Nothing
@@ -2380,7 +2380,7 @@ Partial Class F0_Arqueo
         Me.tbTipoCambio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTipoCambio.Increment = 1.0R
         Me.tbTipoCambio.Location = New System.Drawing.Point(571, 31)
-        Me.tbTipoCambio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTipoCambio.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTipoCambio.MinValue = 0R
         Me.tbTipoCambio.Name = "tbTipoCambio"
         Me.tbTipoCambio.ShowUpDown = True
@@ -2396,7 +2396,7 @@ Partial Class F0_Arqueo
         Me.LabelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX29.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX29.Location = New System.Drawing.Point(472, 59)
-        Me.LabelX29.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX29.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX29.Name = "LabelX29"
         Me.LabelX29.Size = New System.Drawing.Size(91, 28)
         Me.LabelX29.TabIndex = 144
@@ -2408,7 +2408,7 @@ Partial Class F0_Arqueo
         Me.tbVendedor.DesignTimeLayout = tbVendedor_DesignTimeLayout
         Me.tbVendedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbVendedor.Location = New System.Drawing.Point(91, 31)
-        Me.tbVendedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbVendedor.Margin = New System.Windows.Forms.Padding(4)
         Me.tbVendedor.Name = "tbVendedor"
         Me.tbVendedor.SelectedIndex = -1
         Me.tbVendedor.SelectedItem = Nothing
@@ -2424,7 +2424,7 @@ Partial Class F0_Arqueo
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.Location = New System.Drawing.Point(5, 30)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.Size = New System.Drawing.Size(109, 28)
         Me.LabelX2.TabIndex = 129
@@ -2439,7 +2439,7 @@ Partial Class F0_Arqueo
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX4.Location = New System.Drawing.Point(472, 28)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.Size = New System.Drawing.Size(91, 28)
         Me.LabelX4.TabIndex = 118
@@ -2454,7 +2454,7 @@ Partial Class F0_Arqueo
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX1.Location = New System.Drawing.Point(4, -1)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(100, 28)
         Me.LabelX1.TabIndex = 107
@@ -2466,7 +2466,7 @@ Partial Class F0_Arqueo
         Me.tbTurno.DesignTimeLayout = tbTurno_DesignTimeLayout
         Me.tbTurno.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTurno.Location = New System.Drawing.Point(861, 60)
-        Me.tbTurno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTurno.Margin = New System.Windows.Forms.Padding(4)
         Me.tbTurno.Name = "tbTurno"
         Me.tbTurno.SelectedIndex = -1
         Me.tbTurno.SelectedItem = Nothing
@@ -2482,7 +2482,7 @@ Partial Class F0_Arqueo
         Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX6.Location = New System.Drawing.Point(795, 58)
-        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX6.Name = "LabelX6"
         Me.LabelX6.Size = New System.Drawing.Size(73, 28)
         Me.LabelX6.TabIndex = 110
@@ -2493,7 +2493,7 @@ Partial Class F0_Arqueo
         Me.tbFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.tbFecha.Location = New System.Drawing.Point(863, 30)
-        Me.tbFecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFecha.Name = "tbFecha"
         Me.tbFecha.Size = New System.Drawing.Size(129, 22)
         Me.tbFecha.TabIndex = 0
@@ -2507,7 +2507,7 @@ Partial Class F0_Arqueo
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX3.Location = New System.Drawing.Point(795, 27)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.Size = New System.Drawing.Size(85, 28)
         Me.LabelX3.TabIndex = 115
@@ -2531,7 +2531,7 @@ Partial Class F0_Arqueo
         Me.Panel3.Controls.Add(Me.grPanelAyudaExcel)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(234, 556)
         Me.Panel3.TabIndex = 108
@@ -2544,7 +2544,7 @@ Partial Class F0_Arqueo
         Me.gpDetalle.DisabledBackColor = System.Drawing.Color.Empty
         Me.gpDetalle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gpDetalle.Location = New System.Drawing.Point(0, 0)
-        Me.gpDetalle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpDetalle.Margin = New System.Windows.Forms.Padding(4)
         Me.gpDetalle.Name = "gpDetalle"
         Me.gpDetalle.Size = New System.Drawing.Size(121, 556)
         '
@@ -2600,7 +2600,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControl2.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControl2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControl2.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControl2.Name = "SuperTabControl2"
         Me.SuperTabControl2.ReorderTabsEnabled = True
         Me.SuperTabControl2.RotateVerticalText = True
@@ -2620,7 +2620,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel4.Controls.Add(Me.grDetalle1)
         Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel4.Location = New System.Drawing.Point(146, 0)
-        Me.SuperTabControlPanel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanel4.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
         Me.SuperTabControlPanel4.Size = New System.Drawing.Size(0, 529)
         Me.SuperTabControlPanel4.TabIndex = 0
@@ -2630,7 +2630,7 @@ Partial Class F0_Arqueo
         '
         Me.grDetalle1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grDetalle1.Location = New System.Drawing.Point(0, 0)
-        Me.grDetalle1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grDetalle1.Margin = New System.Windows.Forms.Padding(4)
         Me.grDetalle1.Name = "grDetalle1"
         Me.grDetalle1.Size = New System.Drawing.Size(0, 529)
         Me.grDetalle1.TabIndex = 1
@@ -2659,7 +2659,7 @@ Partial Class F0_Arqueo
         '
         Me.grPagosAnticipados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grPagosAnticipados.Location = New System.Drawing.Point(0, 0)
-        Me.grPagosAnticipados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grPagosAnticipados.Margin = New System.Windows.Forms.Padding(4)
         Me.grPagosAnticipados.Name = "grPagosAnticipados"
         Me.grPagosAnticipados.Size = New System.Drawing.Size(23, 649)
         Me.grPagosAnticipados.TabIndex = 2
@@ -2676,7 +2676,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel3.Controls.Add(Me.grProductos)
         Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel3.Location = New System.Drawing.Point(161, 0)
-        Me.SuperTabControlPanel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanel3.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
         Me.SuperTabControlPanel3.Size = New System.Drawing.Size(23, 649)
         Me.SuperTabControlPanel3.TabIndex = 0
@@ -2686,7 +2686,7 @@ Partial Class F0_Arqueo
         '
         Me.grProductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grProductos.Location = New System.Drawing.Point(0, 0)
-        Me.grProductos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grProductos.Margin = New System.Windows.Forms.Padding(4)
         Me.grProductos.Name = "grProductos"
         Me.grProductos.Size = New System.Drawing.Size(23, 649)
         Me.grProductos.TabIndex = 3
@@ -2703,7 +2703,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel2.Controls.Add(Me.grTarjetas)
         Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel2.Location = New System.Drawing.Point(161, 0)
-        Me.SuperTabControlPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
         Me.SuperTabControlPanel2.Size = New System.Drawing.Size(23, 649)
         Me.SuperTabControlPanel2.TabIndex = 0
@@ -2713,7 +2713,7 @@ Partial Class F0_Arqueo
         '
         Me.grTarjetas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grTarjetas.Location = New System.Drawing.Point(0, 0)
-        Me.grTarjetas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grTarjetas.Margin = New System.Windows.Forms.Padding(4)
         Me.grTarjetas.Name = "grTarjetas"
         Me.grTarjetas.Size = New System.Drawing.Size(23, 649)
         Me.grTarjetas.TabIndex = 2
@@ -2731,7 +2731,7 @@ Partial Class F0_Arqueo
         Me.SuperTabControlPanel5.Controls.Add(Me.grDetalle2)
         Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel5.Location = New System.Drawing.Point(161, 0)
-        Me.SuperTabControlPanel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanel5.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
         Me.SuperTabControlPanel5.Size = New System.Drawing.Size(23, 649)
         Me.SuperTabControlPanel5.TabIndex = 2
@@ -2741,7 +2741,7 @@ Partial Class F0_Arqueo
         '
         Me.grDetalle2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grDetalle2.Location = New System.Drawing.Point(0, 0)
-        Me.grDetalle2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grDetalle2.Margin = New System.Windows.Forms.Padding(4)
         Me.grDetalle2.Name = "grDetalle2"
         Me.grDetalle2.Size = New System.Drawing.Size(23, 649)
         Me.grDetalle2.TabIndex = 1
@@ -2802,7 +2802,7 @@ Partial Class F0_Arqueo
         '
         Me.grAyuda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grAyuda.Location = New System.Drawing.Point(0, 0)
-        Me.grAyuda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grAyuda.Margin = New System.Windows.Forms.Padding(4)
         Me.grAyuda.Name = "grAyuda"
         Me.grAyuda.Size = New System.Drawing.Size(107, 529)
         Me.grAyuda.TabIndex = 2
@@ -2811,7 +2811,7 @@ Partial Class F0_Arqueo
         '
         Me.JGrM_Buscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.JGrM_Buscador.Location = New System.Drawing.Point(0, 0)
-        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(4)
         Me.JGrM_Buscador.Name = "JGrM_Buscador"
         Me.JGrM_Buscador.Size = New System.Drawing.Size(1312, 734)
         Me.JGrM_Buscador.TabIndex = 1
@@ -2871,7 +2871,7 @@ Partial Class F0_Arqueo
         Me.ButtonX2.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonX2.Location = New System.Drawing.Point(472, 0)
-        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonX2.Name = "ButtonX2"
         Me.ButtonX2.Size = New System.Drawing.Size(149, 89)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -2891,7 +2891,7 @@ Partial Class F0_Arqueo
         Me.ButtonX1.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonX1.Location = New System.Drawing.Point(621, 0)
-        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(120, 89)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
