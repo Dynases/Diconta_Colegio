@@ -4992,7 +4992,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _Tabla
     End Function
 
-    Public Shared Function L_prServiciosGrabar(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer) As Boolean
+    Public Shared Function L_prServiciosGrabar(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer, _sdmoneda As Integer, _sdemision As Integer) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -5006,6 +5006,8 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@sdtipo", _sdtipo))
         _listParam.Add(New Datos.DParametro("@sdsuc", _sdsuc))
         _listParam.Add(New Datos.DParametro("@sdest", _sdest))
+        _listParam.Add(New Datos.DParametro("@sdmoneda", _sdmoneda))
+        _listParam.Add(New Datos.DParametro("@sdemison", _sdemision))
         _listParam.Add(New Datos.DParametro("@sduact", L_Usuario))
 
         _Tabla = D_ProcedimientoConParam("sp_Mam_TS005", _listParam)
@@ -5014,7 +5016,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
             _sdnumi = _Tabla.Rows(0).Item(0)
             _resultado = True
 
-            L_prServiciosGrabarHistorial(_sdnumi, _sdcprod, _sddesc, _sdprec, _sdtipo, _sdsuc, _sdest, "SERVICIOS", 1)
+            L_prServiciosGrabarHistorial(_sdnumi, _sdcprod, _sddesc, _sdprec, _sdtipo, _sdsuc, _sdest, "SERVICIOS", 1, _sdmoneda, _sdemision)
         Else
             _resultado = False
         End If
@@ -5022,7 +5024,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _resultado
     End Function
 
-    Public Shared Function L_prServicioModificar(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer) As Boolean
+    Public Shared Function L_prServicioModificar(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer, _sdmoneda As Integer, _sdemision As Integer) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -5036,13 +5038,15 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@sdtipo", _sdtipo))
         _listParam.Add(New Datos.DParametro("@sdsuc", _sdsuc))
         _listParam.Add(New Datos.DParametro("@sdest", _sdest))
+        _listParam.Add(New Datos.DParametro("@sdmoneda", _sdmoneda))
+        _listParam.Add(New Datos.DParametro("@sdemison", _sdemision))
         _listParam.Add(New Datos.DParametro("@sduact", L_Usuario))
 
         _Tabla = D_ProcedimientoConParam("sp_Mam_TS005", _listParam)
 
         If _Tabla.Rows.Count > 0 Then
             _resultado = True
-            L_prServiciosGrabarHistorial(_sdnumi, _sdcprod, _sddesc, _sdprec, _sdtipo, _sdsuc, _sdest, "PRODUCTOS INVENTARIO", 2)
+            L_prServiciosGrabarHistorial(_sdnumi, _sdcprod, _sddesc, _sdprec, _sdtipo, _sdsuc, _sdest, "PRODUCTOS INVENTARIO", 2, _sdmoneda, _sdemision)
         Else
             _resultado = False
         End If
@@ -5050,7 +5054,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _resultado
     End Function
 
-    Public Shared Function L_prServiciosBorrar(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer, ByRef _mensaje As String) As Boolean
+    Public Shared Function L_prServiciosBorrar(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer, ByRef _mensaje As String, _sdmoneda As Integer, _sdemision As Integer) As Boolean
 
         Dim _resultado As Boolean
 
@@ -5061,15 +5065,13 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
             _listParam.Add(New Datos.DParametro("@tipo", -1))
             _listParam.Add(New Datos.DParametro("@sdnumi", _sdnumi))
-
-
-            _listParam.Add(New Datos.DParametro("@ciuact", L_Usuario))
+            _listParam.Add(New Datos.DParametro("@sduact", L_Usuario))
 
             _Tabla = D_ProcedimientoConParam("sp_Mam_TS005", _listParam)
 
             If _Tabla.Rows.Count > 0 Then
                 _resultado = True
-                L_prServiciosGrabarHistorial(_sdnumi, _sdcprod, _sddesc, _sdprec, _sdtipo, _sdsuc, _sdest, "SERVICIO", 3)
+                L_prServiciosGrabarHistorial(_sdnumi, _sdcprod, _sddesc, _sdprec, _sdtipo, _sdsuc, _sdest, "SERVICIO", 3, _sdmoneda, _sdemision)
             Else
                 _resultado = False
             End If
@@ -5080,7 +5082,7 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         Return _resultado
     End Function
 
-    Public Shared Function L_prServiciosGrabarHistorial(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer, _programa As String, _transaccion As String) As Boolean
+    Public Shared Function L_prServiciosGrabarHistorial(ByRef _sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer, _programa As String, _transaccion As String, _sdmoneda As Integer, _sdemision As Integer) As Boolean
         Dim _resultado As Boolean
 
         Dim _Tabla As DataTable
@@ -5099,6 +5101,8 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@uact", L_Usuario))
         _listParam.Add(New Datos.DParametro("@nprog", _programa))
         _listParam.Add(New Datos.DParametro("@tran", _transaccion))
+        _listParam.Add(New Datos.DParametro("@sdmoneda", _sdmoneda))
+        _listParam.Add(New Datos.DParametro("@sdemison", _sdemision))
         _Tabla = D_ProcedimientoConParamHistorial("sp_Mam_HC010", _listParam)
 
         If _Tabla.Rows.Count > 0 Then

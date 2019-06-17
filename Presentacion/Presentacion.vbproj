@@ -138,7 +138,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>C:\librerias\itextsharp.dll</HintPath>
+      <HintPath>C:\librerias_\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Data.v3">
       <HintPath>C:\librerias\Janus\Janus.Data.v3.dll</HintPath>

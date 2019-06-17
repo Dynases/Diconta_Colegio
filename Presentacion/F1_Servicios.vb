@@ -111,6 +111,8 @@ Public Class F1_Servicios
         tbEstado.IsReadOnly = False
         tbPrecio.ReadOnly = False
         cbtipo.ReadOnly = False
+        swMoneda.IsReadOnly = False
+        swEmision.IsReadOnly = False
 
         btnImprimir.Visible = False
     End Sub
@@ -122,6 +124,8 @@ Public Class F1_Servicios
         tbEstado.IsReadOnly = True
         tbPrecio.ReadOnly = True
         cbtipo.ReadOnly = True
+        swMoneda.IsReadOnly = True
+        swEmision.IsReadOnly = True
         btnImprimir.Visible = True
 
         JGrM_Buscador.Focus()
@@ -135,7 +139,8 @@ Public Class F1_Servicios
         tbEstado.Value = True
         tbNumi.Clear()
         tbPrecio.Clear()
-        tbCodigo.Focus()
+        'tbCodigo.Focus()
+        tbDesc.Focus()
 
         If (CType(cbtipo.DataSource, DataTable).Rows.Count > 0) Then
             cbtipo.SelectedIndex = 0
@@ -165,7 +170,7 @@ Public Class F1_Servicios
         '_sdnumi As String, _sdcprod As String, _sddesc As String, _sdprec As Double, _sdtipo As Integer, _sdsuc As Integer, _sdest As Integer
 
 
-        Dim res As Boolean = L_prServiciosGrabar(tbNumi.Text, tbCodigo.Text, tbDesc.Text, tbPrecio.Text, cbtipo.Value, 1, IIf(tbEstado.Value = True, 1, 0))
+        Dim res As Boolean = L_prServiciosGrabar(tbNumi.Text, tbCodigo.Text, tbDesc.Text, tbPrecio.Text, cbtipo.Value, 1, IIf(tbEstado.Value = True, 1, 0), IIf(swMoneda.Value = True, 1, 0), IIf(swEmision.Value = True, 1, 0))
 
 
         If res Then
@@ -193,7 +198,7 @@ Public Class F1_Servicios
         Dim res As Boolean
 
 
-        res = L_prServicioModificar(tbNumi.Text, tbCodigo.Text, tbDesc.Text, tbPrecio.Text, cbtipo.Value, 1, IIf(tbEstado.Value = True, 1, 0))
+        res = L_prServicioModificar(tbNumi.Text, tbCodigo.Text, tbDesc.Text, tbPrecio.Text, cbtipo.Value, 1, IIf(tbEstado.Value = True, 1, 0), IIf(swMoneda.Value = True, 1, 0), IIf(swEmision.Value = True, 1, 0))
 
         If res Then
             nameImg = "Default.jpg"
@@ -221,7 +226,7 @@ Public Class F1_Servicios
         bandera = ef.band
         If (bandera = True) Then
             Dim mensajeError As String = ""
-            Dim res As Boolean = L_prServiciosBorrar(tbNumi.Text, tbCodigo.Text, tbDesc.Text, tbPrecio.Text, cbtipo.Value, 1, IIf(tbEstado.Value = True, 1, 0), mensajeError)
+            Dim res As Boolean = L_prServiciosBorrar(tbNumi.Text, tbCodigo.Text, tbDesc.Text, tbPrecio.Text, cbtipo.Value, 1, IIf(tbEstado.Value = True, 1, 0), mensajeError, IIf(swMoneda.Value = True, 1, 0), IIf(swEmision.Value = True, 1, 0))
             If res Then
                 Dim img As Bitmap = New Bitmap(My.Resources.checked, 50, 50)
 
@@ -285,8 +290,8 @@ Public Class F1_Servicios
     Public Overrides Function _PMOGetListEstructuraBuscador() As List(Of Modelos.Celda)
         Dim listEstCeldas As New List(Of Modelos.Celda)
         'a.sdnumi ,a.sdcod ,a.sddesc,a.sdprec ,a.sdtipo ,c.cndesc1 as tipo,a.sdsuc ,b.cadesc as sucursal ,a.sdest
-        listEstCeldas.Add(New Modelos.Celda("sdnumi", False, "Código".ToUpper, 80))
-        listEstCeldas.Add(New Modelos.Celda("sdcod", True, "Codigo P.".ToUpper, 90))
+        listEstCeldas.Add(New Modelos.Celda("sdnumi", True, "Código".ToUpper, 80))
+        listEstCeldas.Add(New Modelos.Celda("sdcod", False, "Codigo P.".ToUpper, 90))
         listEstCeldas.Add(New Modelos.Celda("sddesc", True, "Servicio".ToUpper, 450))
         listEstCeldas.Add(New Modelos.Celda("sdprec", True, "Precio".ToUpper, 90, "0.00"))
         listEstCeldas.Add(New Modelos.Celda("sdtipo", False))
@@ -294,6 +299,8 @@ Public Class F1_Servicios
         listEstCeldas.Add(New Modelos.Celda("sdsuc", False))
         listEstCeldas.Add(New Modelos.Celda("sucursal", True, "Sucursal".ToUpper, 250))
         listEstCeldas.Add(New Modelos.Celda("sdest", True, "Estado".ToUpper, 80))
+        listEstCeldas.Add(New Modelos.Celda("sdmoneda", False, "Moneda".ToUpper, 80))
+        listEstCeldas.Add(New Modelos.Celda("sdemision", False, "Emision".ToUpper, 80))
         Return listEstCeldas
     End Function
 
@@ -312,9 +319,10 @@ Public Class F1_Servicios
             tbDesc.Text = .GetValue("sddesc").ToString
             tbPrecio.Text = .GetValue("sdprec").ToString
             cbtipo.Value = .GetValue("sdtipo")
-
             tbEstado.Value = .GetValue("sdest")
-         
+            swMoneda.Value = .GetValue("sdmoneda")
+            swEmision.Value = .GetValue("sdemision")
+
 
         End With
        
