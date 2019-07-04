@@ -6040,6 +6040,20 @@ DBDies .dbo.TC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
+    Public Shared Function L_prServicioObtenerTotalPorCategoriaSoloFacturale(_categoria As Integer, _fechaI As String, _fechaF As String, _sucursal As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+        _listParam.Add(New Datos.DParametro("@tipo", 110001))
+        _listParam.Add(New Datos.DParametro("@seuact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@fechaI", _fechaI))
+        _listParam.Add(New Datos.DParametro("@fechaF", _fechaF))
+        _listParam.Add(New Datos.DParametro("@categoria", _categoria))
+        _listParam.Add(New Datos.DParametro("@sucursal", _sucursal))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_Asiento", _listParam)
+
+        Return _Tabla
+    End Function
     Public Shared Function L_prServicioObtenerTotalPorCategoriaTodosConRecibo(_categoria As Integer, _fechaI As String, _fechaF As String, _sucursal As Integer) As DataTable
         Dim _Tabla As DataTable
 

@@ -35,6 +35,8 @@ Public Class F0_CargaVentasManuales
         Dim nrodocumento As String
         Dim codigocontrol As String
         Dim codigobanco As Integer
+        Dim moneda As Integer
+        Dim namemoneda As String
         Dim esfactura As Boolean = False
         Dim nameServicio As String = ""
         Dim openFD As New OpenFileDialog()
@@ -59,21 +61,25 @@ Public Class F0_CargaVentasManuales
                         nrodocumento = Archivo(i).Split(",")(8).Trim
                         codigocontrol = Archivo(i).Split(",")(9).Trim
 
-                        If (codigocontrol <> String.Empty) Then
-                            esfactura = True
-                        End If
+                        'If (codigocontrol <> String.Empty) Then
+                        '    esfactura = True
+                        'End If
                         '                  Select Case 0 As codigobanco,0 As codigoestudiante,'' as estudiante,
                         '      0 as codigoservicio,'' as servicio,cast(0 as decimal(18,2)) as montodeposito,
                         'cast('05-06-2019' as date) as fechadeposito,0 as nrocuota, cast(0 as bit ) as esfactura
                         '      ,'' as nrodocumento,'' as codigocontrol, 0 as estado
                         Dim dt2 As DataTable = L_fnObtenerServicio(servicio)
                         If (dt2.Rows.Count > 0) Then
-                            nameServicio = dt2.Rows(0).Item(0)
+                            'sddesc, sdmoneda, IIf(sdmoneda = 1, 'Bolivianos','Dolares')as moneda 
+                            nameServicio = dt2.Rows(0).Item("sddesc")
+                            moneda = dt2.Rows(0).Item("sdmoneda")
+                            namemoneda = dt2.Rows(0).Item("moneda")
+                            esfactura = dt2.Rows(0).Item("sdemision")
                         End If
                         Dim dtalumno As DataTable = L_fnGeneralobtenerNAmeAlumno(codigoestudiante)
                         If (dtalumno.Rows.Count > 0) Then
                             estudiante = dtalumno.Rows(0).Item(0)
-                            dt.Rows.Add(codigobanco, codigoestudiante, estudiante, servicio, nameServicio, MontoDeposito, fechadeposito, nrocuota, esfactura, nrodocumento, codigocontrol, 0)
+                            dt.Rows.Add(codigobanco, codigoestudiante, estudiante, servicio, nameServicio, MontoDeposito, fechadeposito, nrocuota, esfactura, nrodocumento, codigocontrol, 0, moneda, namemoneda)
                         End If
 
 
@@ -150,16 +156,11 @@ Public Class F0_CargaVentasManuales
             .Visible = True
             .Caption = "Es Factura?"
         End With
-
         With grMigracion.RootTable.Columns("nrodocumento")
             .Width = 100
             .Visible = True
             .Caption = "Factura/Recibo"
         End With
-
-
-
-
         With grMigracion.RootTable.Columns("codigocontrol")
             .Width = 120
             .Caption = "Cod Control"
@@ -169,6 +170,15 @@ Public Class F0_CargaVentasManuales
         With grMigracion.RootTable.Columns("estado")
             .Width = 90
             .Visible = False
+        End With
+        With grMigracion.RootTable.Columns("sdmoneda")
+            .Width = 90
+            .Visible = False
+        End With
+        With grMigracion.RootTable.Columns("moneda")
+            .Width = 100
+            .Caption = "Moneda"
+            .Visible = True
         End With
         With grMigracion
             .DefaultFilterRowComparison = FilterConditionOperator.Contains

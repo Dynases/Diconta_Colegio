@@ -379,7 +379,7 @@ Public Class F1_ServicioVenta
 
             cbsector.Value = .GetValue("vcsector")
             tbsecnumi.Text = .GetValue("vcSecNumi")
-
+            swmoneda.Value = .GetValue("vcmoneda")
             _CodVehiculo = .GetValue("vcnumivehic")
 
             ''_CodCliente = .GetValue("vcclie")
