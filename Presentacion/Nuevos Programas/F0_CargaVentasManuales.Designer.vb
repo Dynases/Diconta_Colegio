@@ -111,16 +111,20 @@ Partial Class F0_CargaVentasManuales
         '
         'TxtNombreUsu
         '
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtNombreUsu.ReadOnly = True
+        Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 23)
         Me.TxtNombreUsu.Text = "DEFAULT"
         '
         'PanelToolBar1
         '
-        Me.PanelToolBar1.Size = New System.Drawing.Size(0, 89)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar1.Size = New System.Drawing.Size(0, 72)
         '
         'btnSalir
         '
-        Me.btnSalir.Size = New System.Drawing.Size(0, 89)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSalir.Size = New System.Drawing.Size(0, 72)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
@@ -128,11 +132,17 @@ Partial Class F0_CargaVentasManuales
         '
         'PanelNavegacion
         '
-        Me.PanelNavegacion.Size = New System.Drawing.Size(700, 48)
+        Me.PanelNavegacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelNavegacion.Size = New System.Drawing.Size(525, 39)
+        '
+        'btnUltimo
+        '
+        Me.btnUltimo.Location = New System.Drawing.Point(129, 0)
         '
         'LblPaginacion
         '
-        Me.LblPaginacion.Size = New System.Drawing.Size(472, 48)
+        Me.LblPaginacion.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblPaginacion.Size = New System.Drawing.Size(353, 39)
         '
         'MRlAccion
         '
@@ -141,11 +151,17 @@ Partial Class F0_CargaVentasManuales
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Location = New System.Drawing.Point(0, 0)
-        Me.MRlAccion.Size = New System.Drawing.Size(1205, 89)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Size = New System.Drawing.Size(904, 72)
         '
         'PanelContent
         '
         Me.PanelContent.Controls.Add(Me.GroupPanel1)
+        Me.PanelContent.Size = New System.Drawing.Size(951, 450)
+        '
+        'MSuperTabControlPanel1
+        '
+        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(951, 450)
         '
         'MSuperTabControl
         '
@@ -166,7 +182,7 @@ Partial Class F0_CargaVentasManuales
         '
         'PanelBuscador
         '
-        Me.PanelBuscador.Size = New System.Drawing.Size(1275, 553)
+        Me.PanelBuscador.Size = New System.Drawing.Size(951, 450)
         '
         'btCargarArchivo
         '
@@ -179,9 +195,8 @@ Partial Class F0_CargaVentasManuales
         Me.btCargarArchivo.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btCargarArchivo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.btCargarArchivo.Location = New System.Drawing.Point(0, 0)
-        Me.btCargarArchivo.Margin = New System.Windows.Forms.Padding(4)
         Me.btCargarArchivo.Name = "btCargarArchivo"
-        Me.btCargarArchivo.Size = New System.Drawing.Size(159, 89)
+        Me.btCargarArchivo.Size = New System.Drawing.Size(119, 72)
         Me.btCargarArchivo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btCargarArchivo.TabIndex = 10
         Me.btCargarArchivo.Text = "CARGAR ARCHIVOS"
@@ -196,10 +211,9 @@ Partial Class F0_CargaVentasManuales
         Me.btCargarDatos.Image = Global.Presentacion.My.Resources.Resources.save
         Me.btCargarDatos.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btCargarDatos.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btCargarDatos.Location = New System.Drawing.Point(159, 0)
-        Me.btCargarDatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.btCargarDatos.Location = New System.Drawing.Point(119, 0)
         Me.btCargarDatos.Name = "btCargarDatos"
-        Me.btCargarDatos.Size = New System.Drawing.Size(143, 89)
+        Me.btCargarDatos.Size = New System.Drawing.Size(107, 72)
         Me.btCargarDatos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btCargarDatos.TabIndex = 11
         Me.btCargarDatos.Text = "GUARDAR DATOS"
@@ -214,10 +228,9 @@ Partial Class F0_CargaVentasManuales
         Me.btSalir.Image = Global.Presentacion.My.Resources.Resources.atras
         Me.btSalir.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.btSalir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btSalir.Location = New System.Drawing.Point(302, 0)
-        Me.btSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btSalir.Location = New System.Drawing.Point(226, 0)
         Me.btSalir.Name = "btSalir"
-        Me.btSalir.Size = New System.Drawing.Size(96, 89)
+        Me.btSalir.Size = New System.Drawing.Size(72, 72)
         Me.btSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btSalir.TabIndex = 12
         Me.btSalir.Text = "SALIR"
@@ -232,10 +245,9 @@ Partial Class F0_CargaVentasManuales
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupPanel1.Size = New System.Drawing.Size(1275, 553)
+        Me.GroupPanel1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.GroupPanel1.Size = New System.Drawing.Size(951, 450)
         '
         '
         '
@@ -274,20 +286,20 @@ Partial Class F0_CargaVentasManuales
         Me.grMigracion.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grMigracion.HeaderFormatStyle.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Bold)
         Me.grMigracion.HeaderFormatStyle.FontBold = Janus.Windows.GridEX.TriState.[True]
-        Me.grMigracion.Location = New System.Drawing.Point(4, 4)
-        Me.grMigracion.Margin = New System.Windows.Forms.Padding(4)
+        Me.grMigracion.Location = New System.Drawing.Point(3, 3)
         Me.grMigracion.Name = "grMigracion"
         Me.grMigracion.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grMigracion.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.grMigracion.Size = New System.Drawing.Size(1261, 518)
+        Me.grMigracion.Size = New System.Drawing.Size(939, 421)
         Me.grMigracion.TabIndex = 0
         Me.grMigracion.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'F0_CargaVentasManuales
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1312, 690)
+        Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "F0_CargaVentasManuales"
         Me.Text = "CARGA DE ARCHIVOS"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)

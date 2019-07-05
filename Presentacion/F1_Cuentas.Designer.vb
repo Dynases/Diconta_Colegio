@@ -101,29 +101,29 @@ Partial Class F1_Cuentas
         Me.SuperTabPrincipal.ControlBox.MenuBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
-        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.SuperTabPrincipal.Size = New System.Drawing.Size(1137, 741)
+        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(853, 602)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(1095, 624)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(821, 602)
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1102, 741)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(821, 602)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelSuperior.Size = New System.Drawing.Size(1102, 89)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelSuperior.Size = New System.Drawing.Size(821, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.DarkSlateGray
@@ -135,9 +135,9 @@ Partial Class F1_Cuentas
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 697)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelInferior.Size = New System.Drawing.Size(1102, 44)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 566)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Size = New System.Drawing.Size(821, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.DarkSlateGray
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.DarkSlateGray
@@ -172,15 +172,14 @@ Partial Class F1_Cuentas
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtNombreUsu.Size = New System.Drawing.Size(267, 44)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'PanelToolBar1
         '
         Me.PanelToolBar1.Controls.Add(Me.ButtonX1)
         Me.PanelToolBar1.Controls.Add(Me.ButtonX2)
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelToolBar1.Size = New System.Drawing.Size(724, 89)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelToolBar1.Size = New System.Drawing.Size(543, 72)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnNuevo, 0)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnModificar, 0)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnEliminar, 0)
@@ -192,8 +191,8 @@ Partial Class F1_Cuentas
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.btnSalir.Size = New System.Drawing.Size(115, 89)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalir.Size = New System.Drawing.Size(86, 72)
         '
         'btnGrabar
         '
@@ -206,31 +205,31 @@ Partial Class F1_Cuentas
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(995, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(741, 0)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'MPanelSup
         '
         Me.MPanelSup.Controls.Add(Me.gpFamiliarSocio)
         Me.MPanelSup.Controls.Add(Me.Panel1)
         Me.MPanelSup.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.MPanelSup.Size = New System.Drawing.Size(1102, 608)
+        Me.MPanelSup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MPanelSup.Size = New System.Drawing.Size(821, 494)
         Me.MPanelSup.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.Panel1, 0)
         Me.MPanelSup.Controls.SetChildIndex(Me.gpFamiliarSocio, 0)
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1102, 608)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(821, 494)
         '
         'GroupPanelBuscador
         '
         Me.GroupPanelBuscador.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 539)
-        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.GroupPanelBuscador.Size = New System.Drawing.Size(1102, 69)
+        Me.GroupPanelBuscador.Location = New System.Drawing.Point(0, 438)
+        Me.GroupPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanelBuscador.Size = New System.Drawing.Size(821, 56)
         '
         '
         '
@@ -263,23 +262,22 @@ Partial Class F1_Cuentas
         '
         'JGrM_Buscador
         '
-        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.JGrM_Buscador.Size = New System.Drawing.Size(1096, 42)
+        Me.JGrM_Buscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.JGrM_Buscador.Size = New System.Drawing.Size(815, 33)
         '
         'PanelUsuario
         '
-        Me.PanelUsuario.Location = New System.Drawing.Point(1043, 36)
-        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.PanelUsuario.Location = New System.Drawing.Point(782, 29)
+        Me.PanelUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(171, 0)
         Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(835, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(621, 0)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'MRlAccion
         '
@@ -287,14 +285,14 @@ Partial Class F1_Cuentas
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Location = New System.Drawing.Point(724, 0)
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.MRlAccion.Size = New System.Drawing.Size(271, 89)
+        Me.MRlAccion.Location = New System.Drawing.Point(543, 0)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Size = New System.Drawing.Size(198, 72)
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(643, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.PictureBox1.Location = New System.Drawing.Point(467, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         '
         'LabelX3
         '
@@ -303,10 +301,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.Location = New System.Drawing.Point(9, 212)
-        Me.LabelX3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX3.Location = New System.Drawing.Point(7, 172)
         Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.Size = New System.Drawing.Size(128, 28)
+        Me.LabelX3.Size = New System.Drawing.Size(96, 23)
         Me.LabelX3.TabIndex = 94
         Me.LabelX3.Text = "DESCRIPCION:"
         '
@@ -318,12 +315,11 @@ Partial Class F1_Cuentas
         Me.tbDesc.Border.Class = "TextBoxBorder"
         Me.tbDesc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbDesc.Location = New System.Drawing.Point(141, 215)
-        Me.tbDesc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbDesc.Location = New System.Drawing.Point(106, 175)
         Me.tbDesc.Multiline = True
         Me.tbDesc.Name = "tbDesc"
         Me.tbDesc.PreventEnterBeep = True
-        Me.tbDesc.Size = New System.Drawing.Size(327, 63)
+        Me.tbDesc.Size = New System.Drawing.Size(245, 51)
         Me.tbDesc.TabIndex = 2
         '
         'LabelX2
@@ -333,10 +329,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX2.Location = New System.Drawing.Point(9, 107)
-        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX2.Location = New System.Drawing.Point(7, 87)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(100, 28)
+        Me.LabelX2.Size = New System.Drawing.Size(75, 23)
         Me.LabelX2.TabIndex = 93
         Me.LabelX2.Text = "CUENTA:"
         '
@@ -348,11 +343,10 @@ Partial Class F1_Cuentas
         Me.tbCuenta.Border.Class = "TextBoxBorder"
         Me.tbCuenta.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuenta.Location = New System.Drawing.Point(141, 111)
-        Me.tbCuenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCuenta.Location = New System.Drawing.Point(106, 90)
         Me.tbCuenta.Name = "tbCuenta"
         Me.tbCuenta.PreventEnterBeep = True
-        Me.tbCuenta.Size = New System.Drawing.Size(181, 26)
+        Me.tbCuenta.Size = New System.Drawing.Size(136, 22)
         Me.tbCuenta.TabIndex = 89
         '
         'LabelX1
@@ -362,10 +356,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(9, 71)
-        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX1.Location = New System.Drawing.Point(7, 58)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(100, 28)
+        Me.LabelX1.Size = New System.Drawing.Size(75, 23)
         Me.LabelX1.TabIndex = 92
         Me.LabelX1.Text = "ID:"
         '
@@ -377,11 +370,10 @@ Partial Class F1_Cuentas
         Me.tbNumi.Border.Class = "TextBoxBorder"
         Me.tbNumi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNumi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNumi.Location = New System.Drawing.Point(141, 75)
-        Me.tbNumi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNumi.Location = New System.Drawing.Point(106, 61)
         Me.tbNumi.Name = "tbNumi"
         Me.tbNumi.PreventEnterBeep = True
-        Me.tbNumi.Size = New System.Drawing.Size(96, 26)
+        Me.tbNumi.Size = New System.Drawing.Size(72, 22)
         Me.tbNumi.TabIndex = 91
         Me.tbNumi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -392,12 +384,11 @@ Partial Class F1_Cuentas
         '
         Me.tbMoneda.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbMoneda.Location = New System.Drawing.Point(141, 181)
-        Me.tbMoneda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbMoneda.Location = New System.Drawing.Point(106, 147)
         Me.tbMoneda.Name = "tbMoneda"
         Me.tbMoneda.OffText = "BOLIVIANO"
         Me.tbMoneda.OnText = "DOLAR"
-        Me.tbMoneda.Size = New System.Drawing.Size(181, 27)
+        Me.tbMoneda.Size = New System.Drawing.Size(136, 22)
         Me.tbMoneda.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.tbMoneda.TabIndex = 95
         '
@@ -408,10 +399,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX15.Location = New System.Drawing.Point(9, 177)
-        Me.LabelX15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX15.Location = New System.Drawing.Point(7, 144)
         Me.LabelX15.Name = "LabelX15"
-        Me.LabelX15.Size = New System.Drawing.Size(100, 28)
+        Me.LabelX15.Size = New System.Drawing.Size(75, 23)
         Me.LabelX15.TabIndex = 96
         Me.LabelX15.Text = "MONEDA:"
         '
@@ -423,9 +413,8 @@ Partial Class F1_Cuentas
         Me.gpFamiliarSocio.DisabledBackColor = System.Drawing.Color.Empty
         Me.gpFamiliarSocio.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gpFamiliarSocio.Location = New System.Drawing.Point(0, 0)
-        Me.gpFamiliarSocio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gpFamiliarSocio.Name = "gpFamiliarSocio"
-        Me.gpFamiliarSocio.Size = New System.Drawing.Size(614, 608)
+        Me.gpFamiliarSocio.Size = New System.Drawing.Size(455, 494)
         '
         '
         '
@@ -461,9 +450,8 @@ Partial Class F1_Cuentas
         '
         Me.tvCuentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tvCuentas.Location = New System.Drawing.Point(0, 0)
-        Me.tvCuentas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.tvCuentas.Name = "tvCuentas"
-        Me.tvCuentas.Size = New System.Drawing.Size(608, 581)
+        Me.tvCuentas.Size = New System.Drawing.Size(449, 471)
         Me.tvCuentas.TabIndex = 0
         '
         'Panel1
@@ -471,10 +459,9 @@ Partial Class F1_Cuentas
         Me.Panel1.Controls.Add(Me.GroupPanel1)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(614, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(455, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(488, 608)
+        Me.Panel1.Size = New System.Drawing.Size(366, 494)
         Me.Panel1.TabIndex = 98
         '
         'GroupPanel1
@@ -484,10 +471,9 @@ Partial Class F1_Cuentas
         Me.GroupPanel1.Controls.Add(Me.grDetalle)
         Me.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupPanel1.Location = New System.Drawing.Point(0, 379)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel1.Location = New System.Drawing.Point(0, 308)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(488, 229)
+        Me.GroupPanel1.Size = New System.Drawing.Size(366, 186)
         '
         '
         '
@@ -523,9 +509,8 @@ Partial Class F1_Cuentas
         '
         Me.grDetalle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grDetalle.Location = New System.Drawing.Point(0, 0)
-        Me.grDetalle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grDetalle.Name = "grDetalle"
-        Me.grDetalle.Size = New System.Drawing.Size(482, 202)
+        Me.grDetalle.Size = New System.Drawing.Size(360, 163)
         Me.grDetalle.TabIndex = 2
         '
         'Panel2
@@ -548,9 +533,8 @@ Partial Class F1_Cuentas
         Me.Panel2.Controls.Add(Me.tbNumi)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(488, 379)
+        Me.Panel2.Size = New System.Drawing.Size(366, 308)
         Me.Panel2.TabIndex = 107
         '
         'tbAuxiliar
@@ -558,12 +542,11 @@ Partial Class F1_Cuentas
         tbAuxiliar_DesignTimeLayout.LayoutString = resources.GetString("tbAuxiliar_DesignTimeLayout.LayoutString")
         Me.tbAuxiliar.DesignTimeLayout = tbAuxiliar_DesignTimeLayout
         Me.tbAuxiliar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAuxiliar.Location = New System.Drawing.Point(340, 331)
-        Me.tbAuxiliar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbAuxiliar.Location = New System.Drawing.Point(255, 269)
         Me.tbAuxiliar.Name = "tbAuxiliar"
         Me.tbAuxiliar.SelectedIndex = -1
         Me.tbAuxiliar.SelectedItem = Nothing
-        Me.tbAuxiliar.Size = New System.Drawing.Size(88, 26)
+        Me.tbAuxiliar.Size = New System.Drawing.Size(66, 22)
         Me.tbAuxiliar.TabIndex = 107
         Me.tbAuxiliar.Visible = False
         '
@@ -575,11 +558,10 @@ Partial Class F1_Cuentas
         Me.tbNivel2.Border.Class = "TextBoxBorder"
         Me.tbNivel2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNivel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNivel2.Location = New System.Drawing.Point(455, 388)
-        Me.tbNivel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNivel2.Location = New System.Drawing.Point(341, 315)
         Me.tbNivel2.Name = "tbNivel2"
         Me.tbNivel2.PreventEnterBeep = True
-        Me.tbNivel2.Size = New System.Drawing.Size(53, 26)
+        Me.tbNivel2.Size = New System.Drawing.Size(40, 22)
         Me.tbNivel2.TabIndex = 106
         Me.tbNivel2.Visible = False
         '
@@ -591,11 +573,10 @@ Partial Class F1_Cuentas
         Me.tbPadre.Border.Class = "TextBoxBorder"
         Me.tbPadre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbPadre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbPadre.Location = New System.Drawing.Point(332, 388)
-        Me.tbPadre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbPadre.Location = New System.Drawing.Point(249, 315)
         Me.tbPadre.Name = "tbPadre"
         Me.tbPadre.PreventEnterBeep = True
-        Me.tbPadre.Size = New System.Drawing.Size(96, 26)
+        Me.tbPadre.Size = New System.Drawing.Size(72, 22)
         Me.tbPadre.TabIndex = 106
         Me.tbPadre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.tbPadre.Visible = False
@@ -607,10 +588,9 @@ Partial Class F1_Cuentas
         Me.panelCuentas.Controls.Add(Me.LabelX5)
         Me.panelCuentas.Controls.Add(Me.tbNivel)
         Me.panelCuentas.Controls.Add(Me.tbCuentaMayor)
-        Me.panelCuentas.Location = New System.Drawing.Point(3, 289)
-        Me.panelCuentas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelCuentas.Location = New System.Drawing.Point(2, 235)
         Me.panelCuentas.Name = "panelCuentas"
-        Me.panelCuentas.Size = New System.Drawing.Size(323, 91)
+        Me.panelCuentas.Size = New System.Drawing.Size(242, 74)
         Me.panelCuentas.TabIndex = 105
         '
         'tbNumiPadre
@@ -621,11 +601,10 @@ Partial Class F1_Cuentas
         Me.tbNumiPadre.Border.Class = "TextBoxBorder"
         Me.tbNumiPadre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNumiPadre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNumiPadre.Location = New System.Drawing.Point(163, 89)
-        Me.tbNumiPadre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNumiPadre.Location = New System.Drawing.Point(122, 72)
         Me.tbNumiPadre.Name = "tbNumiPadre"
         Me.tbNumiPadre.PreventEnterBeep = True
-        Me.tbNumiPadre.Size = New System.Drawing.Size(132, 26)
+        Me.tbNumiPadre.Size = New System.Drawing.Size(99, 22)
         Me.tbNumiPadre.TabIndex = 105
         Me.tbNumiPadre.Visible = False
         '
@@ -636,10 +615,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX4.Location = New System.Drawing.Point(9, 7)
-        Me.LabelX4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX4.Location = New System.Drawing.Point(7, 6)
         Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.Size = New System.Drawing.Size(100, 28)
+        Me.LabelX4.Size = New System.Drawing.Size(75, 23)
         Me.LabelX4.TabIndex = 102
         Me.LabelX4.Text = "NIVEL:"
         '
@@ -650,10 +628,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX5.Location = New System.Drawing.Point(9, 43)
-        Me.LabelX5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX5.Location = New System.Drawing.Point(7, 35)
         Me.LabelX5.Name = "LabelX5"
-        Me.LabelX5.Size = New System.Drawing.Size(147, 28)
+        Me.LabelX5.Size = New System.Drawing.Size(110, 23)
         Me.LabelX5.TabIndex = 104
         Me.LabelX5.Text = "CUENTA MAYOR:"
         '
@@ -665,11 +642,10 @@ Partial Class F1_Cuentas
         Me.tbNivel.Border.Class = "TextBoxBorder"
         Me.tbNivel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbNivel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNivel.Location = New System.Drawing.Point(161, 9)
-        Me.tbNivel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbNivel.Location = New System.Drawing.Point(121, 7)
         Me.tbNivel.Name = "tbNivel"
         Me.tbNivel.PreventEnterBeep = True
-        Me.tbNivel.Size = New System.Drawing.Size(53, 26)
+        Me.tbNivel.Size = New System.Drawing.Size(40, 22)
         Me.tbNivel.TabIndex = 101
         '
         'tbCuentaMayor
@@ -680,11 +656,10 @@ Partial Class F1_Cuentas
         Me.tbCuentaMayor.Border.Class = "TextBoxBorder"
         Me.tbCuentaMayor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuentaMayor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuentaMayor.Location = New System.Drawing.Point(161, 44)
-        Me.tbCuentaMayor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCuentaMayor.Location = New System.Drawing.Point(121, 36)
         Me.tbCuentaMayor.Name = "tbCuentaMayor"
         Me.tbCuentaMayor.PreventEnterBeep = True
-        Me.tbCuentaMayor.Size = New System.Drawing.Size(132, 26)
+        Me.tbCuentaMayor.Size = New System.Drawing.Size(99, 22)
         Me.tbCuentaMayor.TabIndex = 103
         '
         'tbCuenta2
@@ -695,11 +670,10 @@ Partial Class F1_Cuentas
         Me.tbCuenta2.Border.Class = "TextBoxBorder"
         Me.tbCuenta2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuenta2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuenta2.Location = New System.Drawing.Point(239, 111)
-        Me.tbCuenta2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCuenta2.Location = New System.Drawing.Point(179, 90)
         Me.tbCuenta2.Name = "tbCuenta2"
         Me.tbCuenta2.PreventEnterBeep = True
-        Me.tbCuenta2.Size = New System.Drawing.Size(84, 26)
+        Me.tbCuenta2.Size = New System.Drawing.Size(63, 22)
         Me.tbCuenta2.TabIndex = 1
         '
         'tbCuenta1
@@ -710,11 +684,10 @@ Partial Class F1_Cuentas
         Me.tbCuenta1.Border.Class = "TextBoxBorder"
         Me.tbCuenta1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.tbCuenta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCuenta1.Location = New System.Drawing.Point(141, 111)
-        Me.tbCuenta1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCuenta1.Location = New System.Drawing.Point(106, 90)
         Me.tbCuenta1.Name = "tbCuenta1"
         Me.tbCuenta1.PreventEnterBeep = True
-        Me.tbCuenta1.Size = New System.Drawing.Size(96, 26)
+        Me.tbCuenta1.Size = New System.Drawing.Size(72, 22)
         Me.tbCuenta1.TabIndex = 0
         '
         'LabelX6
@@ -724,10 +697,9 @@ Partial Class F1_Cuentas
         '
         Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX6.Location = New System.Drawing.Point(9, 145)
-        Me.LabelX6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LabelX6.Location = New System.Drawing.Point(7, 118)
         Me.LabelX6.Name = "LabelX6"
-        Me.LabelX6.Size = New System.Drawing.Size(128, 28)
+        Me.LabelX6.Size = New System.Drawing.Size(96, 23)
         Me.LabelX6.TabIndex = 98
         Me.LabelX6.Text = "TIPO:"
         '
@@ -736,12 +708,11 @@ Partial Class F1_Cuentas
         tbTipo_DesignTimeLayout.LayoutString = resources.GetString("tbTipo_DesignTimeLayout.LayoutString")
         Me.tbTipo.DesignTimeLayout = tbTipo_DesignTimeLayout
         Me.tbTipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbTipo.Location = New System.Drawing.Point(143, 145)
-        Me.tbTipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbTipo.Location = New System.Drawing.Point(107, 118)
         Me.tbTipo.Name = "tbTipo"
         Me.tbTipo.SelectedIndex = -1
         Me.tbTipo.SelectedItem = Nothing
-        Me.tbTipo.Size = New System.Drawing.Size(180, 26)
+        Me.tbTipo.Size = New System.Drawing.Size(135, 22)
         Me.tbTipo.TabIndex = 97
         '
         'ImageList1
@@ -761,10 +732,9 @@ Partial Class F1_Cuentas
         Me.ButtonX2.Image = Global.Presentacion.My.Resources.Resources.contraer
         Me.ButtonX2.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonX2.Location = New System.Drawing.Point(499, 0)
-        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonX2.Location = New System.Drawing.Point(374, 0)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(108, 89)
+        Me.ButtonX2.Size = New System.Drawing.Size(81, 72)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 12
         Me.ButtonX2.Text = "CONTRAER"
@@ -779,10 +749,9 @@ Partial Class F1_Cuentas
         Me.ButtonX1.Image = Global.Presentacion.My.Resources.Resources.expandir
         Me.ButtonX1.ImageFixedSize = New System.Drawing.Size(48, 48)
         Me.ButtonX1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonX1.Location = New System.Drawing.Point(607, 0)
-        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonX1.Location = New System.Drawing.Point(455, 0)
         Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(108, 89)
+        Me.ButtonX1.Size = New System.Drawing.Size(81, 72)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 13
         Me.ButtonX1.Text = "EXPANDIR"
@@ -793,22 +762,22 @@ Partial Class F1_Cuentas
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ELIMINARToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(158, 40)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(141, 40)
         '
         'ELIMINARToolStripMenuItem
         '
         Me.ELIMINARToolStripMenuItem.Image = Global.Presentacion.My.Resources.Resources.elim_fila2
         Me.ELIMINARToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ELIMINARToolStripMenuItem.Name = "ELIMINARToolStripMenuItem"
-        Me.ELIMINARToolStripMenuItem.Size = New System.Drawing.Size(157, 36)
+        Me.ELIMINARToolStripMenuItem.Size = New System.Drawing.Size(140, 36)
         Me.ELIMINARToolStripMenuItem.Text = "ELIMINAR"
         '
         'F1_Cuentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1137, 741)
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ClientSize = New System.Drawing.Size(853, 602)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "F1_Cuentas"
         Me.Text = "F1_Cuentas"
         Me.Controls.SetChildIndex(Me.SuperTabPrincipal, 0)

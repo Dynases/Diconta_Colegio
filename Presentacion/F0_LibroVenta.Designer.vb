@@ -24,8 +24,8 @@ Partial Class F0_LibroVenta
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F0_LibroVenta))
         Dim Background1 As DevComponents.DotNetBar.SuperGrid.Style.Background = New DevComponents.DotNetBar.SuperGrid.Style.Background()
-        Dim CbAlmacen_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Dim tbTipoFactura_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+        Dim CbAlmacen_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Me.TableLayoutPanelPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupPanelAciones = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.PanelExAcciones = New DevComponents.DotNetBar.PanelEx()
@@ -38,6 +38,7 @@ Partial Class F0_LibroVenta
         Me.DgdLCV = New DevComponents.DotNetBar.SuperGrid.SuperGridControl()
         Me.GroupPanelDatosGenerales = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.PanelExDatosGenerales = New DevComponents.DotNetBar.PanelEx()
+        Me.tbTipoFactura = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.tbFechaF = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
         Me.tbFechaI = New DevComponents.Editors.DateTimeAdv.DateTimeInput()
@@ -51,7 +52,7 @@ Partial Class F0_LibroVenta
         Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.Tb2NitRazonSocial = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
-        Me.tbTipoFactura = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
+        Me.Bt5Salir = New DevComponents.DotNetBar.ButtonX()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.BubbleBarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,10 +76,10 @@ Partial Class F0_LibroVenta
         Me.GroupPanelListaVentas.SuspendLayout()
         Me.GroupPanelDatosGenerales.SuspendLayout()
         Me.PanelExDatosGenerales.SuspendLayout()
+        CType(Me.tbTipoFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbFechaF, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbFechaI, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CbAlmacen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tbTipoFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
@@ -100,7 +101,7 @@ Partial Class F0_LibroVenta
         'PanelInferior
         '
         Me.PanelInferior.Location = New System.Drawing.Point(0, 570)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -135,7 +136,7 @@ Partial Class F0_LibroVenta
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.ReadOnly = True
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         Me.TxtNombreUsu.Text = "DEFAULT"
@@ -145,7 +146,7 @@ Partial Class F0_LibroVenta
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelPrincipal.Size = New System.Drawing.Size(984, 609)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
@@ -166,17 +167,17 @@ Partial Class F0_LibroVenta
         'PanelContent
         '
         Me.PanelContent.Controls.Add(Me.TableLayoutPanelPrincipal)
-        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelContent.Size = New System.Drawing.Size(951, 498)
         '
         'Panel1
         '
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Size = New System.Drawing.Size(984, 498)
         '
         'MSuperTabControlPanel1
         '
-        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(951, 498)
         '
         'MSuperTabControl
@@ -194,7 +195,7 @@ Partial Class F0_LibroVenta
         Me.MSuperTabControl.ControlBox.MenuBox.Name = ""
         Me.MSuperTabControl.ControlBox.Name = ""
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
-        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(2)
         Me.MSuperTabControl.Size = New System.Drawing.Size(984, 498)
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
         '
@@ -265,6 +266,7 @@ Partial Class F0_LibroVenta
         Me.PanelExAcciones.AutoScroll = True
         Me.PanelExAcciones.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelExAcciones.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelExAcciones.Controls.Add(Me.Bt5Salir)
         Me.PanelExAcciones.Controls.Add(Me.Bt1Generar)
         Me.PanelExAcciones.Controls.Add(Me.Bt4Txt)
         Me.PanelExAcciones.Controls.Add(Me.Bt2Reporte)
@@ -480,6 +482,22 @@ Partial Class F0_LibroVenta
         Me.PanelExDatosGenerales.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelExDatosGenerales.Style.GradientAngle = 90
         Me.PanelExDatosGenerales.TabIndex = 13
+        '
+        'tbTipoFactura
+        '
+        Me.tbTipoFactura.ComboStyle = Janus.Windows.GridEX.ComboStyle.DropDownList
+        tbTipoFactura_DesignTimeLayout.LayoutString = resources.GetString("tbTipoFactura_DesignTimeLayout.LayoutString")
+        Me.tbTipoFactura.DesignTimeLayout = tbTipoFactura_DesignTimeLayout
+        Me.tbTipoFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTipoFactura.Location = New System.Drawing.Point(165, 63)
+        Me.tbTipoFactura.Name = "tbTipoFactura"
+        Me.tbTipoFactura.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
+        Me.tbTipoFactura.Office2007CustomColor = System.Drawing.Color.DodgerBlue
+        Me.tbTipoFactura.SelectedIndex = -1
+        Me.tbTipoFactura.SelectedItem = Nothing
+        Me.tbTipoFactura.Size = New System.Drawing.Size(200, 21)
+        Me.tbTipoFactura.TabIndex = 36
+        Me.tbTipoFactura.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
         'LabelX3
         '
@@ -735,28 +753,25 @@ Partial Class F0_LibroVenta
         Me.LabelX5.Text = "NIT:"
         Me.LabelX5.TextAlignment = System.Drawing.StringAlignment.Far
         '
-        'tbTipoFactura
+        'Bt5Salir
         '
-        Me.tbTipoFactura.ComboStyle = Janus.Windows.GridEX.ComboStyle.DropDownList
-        tbTipoFactura_DesignTimeLayout.LayoutString = resources.GetString("tbTipoFactura_DesignTimeLayout.LayoutString")
-        Me.tbTipoFactura.DesignTimeLayout = tbTipoFactura_DesignTimeLayout
-        Me.tbTipoFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbTipoFactura.Location = New System.Drawing.Point(165, 63)
-        Me.tbTipoFactura.Name = "tbTipoFactura"
-        Me.tbTipoFactura.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
-        Me.tbTipoFactura.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.tbTipoFactura.SelectedIndex = -1
-        Me.tbTipoFactura.SelectedItem = Nothing
-        Me.tbTipoFactura.Size = New System.Drawing.Size(200, 21)
-        Me.tbTipoFactura.TabIndex = 36
-        Me.tbTipoFactura.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
+        Me.Bt5Salir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.Bt5Salir.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground
+        Me.Bt5Salir.Image = Global.Presentacion.My.Resources.Resources.atras
+        Me.Bt5Salir.ImageFixedSize = New System.Drawing.Size(40, 40)
+        Me.Bt5Salir.Location = New System.Drawing.Point(23, 236)
+        Me.Bt5Salir.Name = "Bt5Salir"
+        Me.Bt5Salir.Size = New System.Drawing.Size(150, 50)
+        Me.Bt5Salir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.Bt5Salir.TabIndex = 4
+        Me.Bt5Salir.Text = "    Salir"
         '
         'F0_LibroVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 609)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_LibroVenta"
         Me.Text = "F01_LibroVenta"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)
@@ -786,10 +801,10 @@ Partial Class F0_LibroVenta
         Me.GroupPanelDatosGenerales.ResumeLayout(False)
         Me.PanelExDatosGenerales.ResumeLayout(False)
         Me.PanelExDatosGenerales.PerformLayout()
+        CType(Me.tbTipoFactura, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbFechaF, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbFechaI, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CbAlmacen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbTipoFactura, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -819,4 +834,5 @@ Partial Class F0_LibroVenta
     Friend WithEvents tbFechaF As DevComponents.Editors.DateTimeAdv.DateTimeInput
     Friend WithEvents tbFechaI As DevComponents.Editors.DateTimeAdv.DateTimeInput
     Friend WithEvents tbTipoFactura As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Friend WithEvents Bt5Salir As DevComponents.DotNetBar.ButtonX
 End Class

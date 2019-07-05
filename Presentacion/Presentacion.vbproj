@@ -133,8 +133,8 @@
     <Reference Include="GMap.NET.WindowsForms">
       <HintPath>C:\librerias\Gmap\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.AcroPDFLib">
-      <HintPath>C:\librerias\PDF\Interop.AcroPDFLib.dll</HintPath>
+    <Reference Include="Interop.AcroPDFLib.1.0">
+      <HintPath>..\..\..\..\..\ARCHIVOS COMPARTIDOS\Raul\Interop.AcroPDFLib.1.0.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="itextsharp">

@@ -7,7 +7,7 @@ Public Class PR_PlanCuentas
     Public _modulo As SideNavItem
     Private Sub _prIniciarTodo()
         _PMIniciarTodo()
-        Me.Text = "reporte de resumen de arqueo".ToUpper
+        Me.Text = "plan de cuentas".ToUpper
 
         MReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
     End Sub
@@ -52,7 +52,7 @@ Public Class PR_PlanCuentas
             objrep.SetDataSource(dt)
             MReportViewer.ReportSource = objrep
 
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+            objrep.SetParameterValue("titulo", "ANGLO AMERICANO " + gs_empresaDesc.ToUpper)
 
             MReportViewer.Show()
             MReportViewer.BringToFront()

@@ -17,6 +17,8 @@ Imports Facturacion
 
 Public Class F0_CargaVentasManuales
     Dim namearchivo As String = ""
+    Public _tab As SuperTabItem
+    Public _modulo As SideNavItem
     Public Sub _Limpiar()
         Dim dt As DataTable = L_fnGeneralFormatoMigracion()
         dt.Rows().Clear()
@@ -244,7 +246,9 @@ Public Class F0_CargaVentasManuales
     End Sub
 
     Private Sub btSalir_Click(sender As Object, e As EventArgs) Handles btSalir.Click
-        Me.Close()
+        'Me.Close()
+        _modulo.Select()
+        _tab.Close()
 
     End Sub
 

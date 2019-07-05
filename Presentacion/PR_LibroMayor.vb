@@ -494,7 +494,7 @@ Public Class PR_LibroMayor
 
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+            objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO" + gs_empresaDesc.ToUpper)
             objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
             objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
             objrep.SetParameterValue("nroCuenta", tbNumi.Text)
@@ -534,7 +534,7 @@ Public Class PR_LibroMayor
 
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
+            objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO" + gs_empresaDesc.ToUpper)
             objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
             objrep.SetParameterValue("cliente", IIf(tbCliente.Tag > 0, _cobrarPagar, ""))
             objrep.SetParameterValue("nroCuenta", tbNumi.Text)
@@ -727,7 +727,7 @@ Public Class PR_LibroMayor
                     objrep.SetDataSource(dt)
                     objrep.SetParameterValue("fechaDesde", "")
                     objrep.SetParameterValue("fechaHasta", "")
-                    objrep.SetParameterValue("titulo", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDescSistema.ToUpper)
+                    objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO" + gs_empresaDescSistema.ToUpper)
                     objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
                     objrep.SetParameterValue("ultimoRegistro", 0)
 

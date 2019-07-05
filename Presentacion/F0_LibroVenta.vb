@@ -445,8 +445,8 @@ Public Class F0_LibroVenta
         objrep.SetParameterValue("Nit", Tb2NitRazonSocial.Text)
 
         'objrep.SetParameterValue("empresaDesc", gs_empresaDescSistema)
-        objrep.SetParameterValue("empresaDesc", "AUTOMOVIL CLUB BOLIVIANO " + gs_empresaDesc.ToUpper)
-        'gs_empresaDireccion
+        objrep.SetParameterValue("empresaDesc", "CENTRO CULTURAL ANGLO AMERICANO " + gs_empresaDesc.ToUpper)
+        gs_empresaDireccion = "Av. Santa Cruz #2018"
         objrep.SetParameterValue("empresaDirec", gs_empresaDireccion)
         If gi_empresaNumi = 1 Then 'filial
             Dim dtSucursal As DataTable = L_fnDosificacionObtenerDatosSucursal(CbAlmacen.Value)
@@ -633,5 +633,10 @@ Public Class F0_LibroVenta
     End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         _prSalir()
+    End Sub
+
+    Private Sub Bt5Salir_Click(sender As Object, e As EventArgs) Handles Bt5Salir.Click
+        _modulo.Select()
+        _tab.Close()
     End Sub
 End Class

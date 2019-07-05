@@ -430,6 +430,9 @@ Public Class F1_AsientosContables
         dtServicios = L_prlistarCategoriasActivos() ''Ok
         Dim BanderaCuentaPorCobrar As Boolean = False
         Dim contador As Integer = 0 ''Contador para sacar los numi de las ventas 
+
+        tbFechaF.Value = tbFechaI.Value
+
         For i As Integer = 0 To dt.Rows.Count - 1
 
             ''canumi , nro,cadesc ,chporcen,chdebe ,chhaber 
