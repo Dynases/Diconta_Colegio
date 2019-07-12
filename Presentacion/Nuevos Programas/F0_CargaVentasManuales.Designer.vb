@@ -111,19 +111,19 @@ Partial Class F0_CargaVentasManuales
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtNombreUsu.ReadOnly = True
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 23)
         Me.TxtNombreUsu.Text = "DEFAULT"
         '
         'PanelToolBar1
         '
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelToolBar1.Size = New System.Drawing.Size(0, 72)
         '
         'btnSalir
         '
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Size = New System.Drawing.Size(0, 72)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
@@ -132,7 +132,7 @@ Partial Class F0_CargaVentasManuales
         '
         'PanelNavegacion
         '
-        Me.PanelNavegacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelNavegacion.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelNavegacion.Size = New System.Drawing.Size(525, 39)
         '
         'btnUltimo
@@ -151,7 +151,7 @@ Partial Class F0_CargaVentasManuales
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Location = New System.Drawing.Point(0, 0)
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(2)
         Me.MRlAccion.Size = New System.Drawing.Size(904, 72)
         '
         'PanelContent
@@ -246,7 +246,7 @@ Partial Class F0_CargaVentasManuales
         Me.GroupPanel1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.GroupPanel1.Padding = New System.Windows.Forms.Padding(3)
         Me.GroupPanel1.Size = New System.Drawing.Size(951, 450)
         '
         '
@@ -299,7 +299,7 @@ Partial Class F0_CargaVentasManuales
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 561)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "F0_CargaVentasManuales"
         Me.Text = "CARGA DE ARCHIVOS"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)
