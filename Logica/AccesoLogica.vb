@@ -6054,7 +6054,7 @@ SUC001 .canumi =ZY003.ydsuc" + _Cadena
 
         Return _Tabla
     End Function
-    Public Shared Function L_prServicioObtenerTotalPorCategoriaTodosConRecibo(_categoria As Integer, _fechaI As String, _fechaF As String, _sucursal As Integer) As DataTable
+    Public Shared Function L_prServicioObtenerTotalPorCategoriaTodosConRecibo(_categoria As Integer, _fechaI As String, _fechaF As String, _sucursal As Integer, _Moneda As Integer) As DataTable
         Dim _Tabla As DataTable
 
         Dim _listParam As New List(Of Datos.DParametro)
@@ -6064,11 +6064,12 @@ SUC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@fechaF", _fechaF))
         _listParam.Add(New Datos.DParametro("@categoria", _categoria))
         _listParam.Add(New Datos.DParametro("@sucursal", _sucursal))
+        _listParam.Add(New Datos.DParametro("@moneda", _Moneda))
         _Tabla = D_ProcedimientoConParam("sp_Mam_Asiento", _listParam)
 
         Return _Tabla
     End Function
-    Public Shared Function L_prServicioObtenerTotalPorCategoriaCuentasCobrar(_Tventa As Integer, _categoria As Integer, _fechaI As String, _fechaF As String, _sucursal As Integer) As DataTable
+    Public Shared Function L_prServicioObtenerTotalPorCategoriaCuentasCobrar(_Tventa As Integer, _categoria As Integer, _fechaI As String, _fechaF As String, _sucursal As Integer, _moneda As Integer) As DataTable
         Dim _Tabla As DataTable
 
         Dim _listParam As New List(Of Datos.DParametro)
@@ -6079,6 +6080,7 @@ SUC001 .canumi =ZY003.ydsuc" + _Cadena
         _listParam.Add(New Datos.DParametro("@tventa", _Tventa))
         _listParam.Add(New Datos.DParametro("@categoria", _categoria))
         _listParam.Add(New Datos.DParametro("@sucursal", _sucursal))
+        _listParam.Add(New Datos.DParametro("@moneda", _moneda))
         _Tabla = D_ProcedimientoConParam("sp_Mam_Asiento", _listParam)
 
         Return _Tabla

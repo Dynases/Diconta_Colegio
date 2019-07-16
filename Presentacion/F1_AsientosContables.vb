@@ -283,7 +283,11 @@ Public Class F1_AsientosContables
             'diseño de la grilla
             .VisualStyle = VisualStyle.Office2007
         End With
+        With grComprobante.RootTable.Columns("chmoneda")
+            .Width = 100
 
+            .Visible = False
+        End With
         _prAplicarCondiccionJanus()
     End Sub
 
@@ -444,6 +448,7 @@ Public Class F1_AsientosContables
             End If
             tabla.ImportRow(dt.Rows(i))
             Dim numiCuenta As Integer = dt.Rows(i).Item("canumi")
+            Dim moneda As Integer = dt.Rows(i).Item("chmoneda")
             contador += 1
             Dim numicuentaatc As Integer = 21 'ATC
             Dim Numicuentatran As Integer
@@ -456,7 +461,7 @@ Public Class F1_AsientosContables
                     If porcentaje = 3 Then 'porcentaje = 3 CODIGO DANNY PARA SEPARAR TOTALES PARA IT
                         dtServicioTotal = L_prServicioObtenerTotalPorCategoriaSoloFacturale(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)  ''Ok
                     Else
-                        dtServicioTotal = L_prServicioObtenerTotalPorCategoriaTodosConRecibo(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)  ''Ok
+                        dtServicioTotal = L_prServicioObtenerTotalPorCategoriaTodosConRecibo(categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1, moneda)  ''Ok
                     End If
                     If (dtServicioTotal.Rows.Count > 0) Then
                         If (contador = 1) Then
@@ -481,22 +486,39 @@ Public Class F1_AsientosContables
                                 'total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                 If (categoria = 1) Then ''''''''Escuela
-                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
+                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(1, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1, moneda)
                                     total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
-
+                                    ' totalus = dtserviciostotalcuentacobrar.Rows(0).Item("totalus")
                                     If total > 0 Then  'Efectivo
 
                                         Linea = Linea + 1
                                         Dim conversion As Double = (total * (porcentaje / 100))
                                         conversion = to3Decimales(conversion)
-                                        Dim totales As Double = Round(conversion, 2)
-                                        Dim TotalSus As Double = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
+                                        Dim totales, totalsus As Double
+                                        If moneda = 1 Then
+                                            totales = Round(conversion, 2)
+                                            totalsus = Round(to3Decimales(totales / (tbTipoCambio.Value)), 2)
+                                        Else
+                                            totalsus = Round(conversion, 2)
+                                            totales = Round(to3Decimales(totalsus * (tbTipoCambio.Value)), 2)
+                                        End If
                                         '''''Variable Multiproposito de Lavadero
                                         tabla.Rows.Add(numiCuenta, DBNull.Value, "POR INGRESO DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Escuela, Linea)
 
                                     End If
 
-                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1)
+                                    'If totalus > 0 Then  'Efectivo
+
+                                    '    Linea = Linea + 1
+                                    '    Dim conversion As Double = (total * (porcentaje / 100))
+                                    '    conversion = to3Decimales(conversion)
+                                    '    Dim totales As Double = Round(conversion * (tbTipoCambio.Value), 2)
+                                    '    Dim TotalSus As Double = Round(conversion, 2)
+                                    '    '''''Variable Multiproposito de Lavadero
+                                    '    tabla.Rows.Add(numiCuenta, DBNull.Value, "POR INGRESO DE " + dtServicios.Rows(j).Item("cedesc1") + " DEL " + tbFechaI.Value.ToString("dd/MM/yyyy") + " AL " + tbFechaF.Value.ToString("dd/MM/yyyy"), DBNull.Value, DBNull.Value, DBNull.Value, tbTipoCambio.Value, totales, DBNull.Value, TotalSus, DBNull.Value, Escuela, Linea)
+
+                                    'End If
+                                    dtserviciostotalcuentacobrar = L_prServicioObtenerTotalPorCategoriaCuentasCobrar(3, categoria, tbFechaI.Value.ToString("yyyy/MM/dd"), tbFechaF.Value.ToString("yyyy/MM/dd"), 1, moneda)
                                     total = dtserviciostotalcuentacobrar.Rows(0).Item("total")
 
                                     If total > 0 Then  'ATC
@@ -687,6 +709,11 @@ Public Class F1_AsientosContables
             .GroupByBoxVisible = False
             'diseño de la grilla
             .VisualStyle = VisualStyle.Office2007
+        End With
+        With grComprobante.RootTable.Columns("chmoneda")
+            .Width = 100
+
+            .Visible = False
         End With
         Dim aux As DataTable = CType(grComprobante.DataSource, DataTable)
 
