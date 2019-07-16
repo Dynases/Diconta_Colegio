@@ -283,11 +283,11 @@ Public Class F1_AsientosContables
             'diseño de la grilla
             .VisualStyle = VisualStyle.Office2007
         End With
-        With grComprobante.RootTable.Columns("chmoneda")
-            .Width = 100
+        'With grComprobante.RootTable.Columns("chmoneda")
+        '    .Width = 100
 
-            .Visible = False
-        End With
+        '    .Visible = False
+        'End With
         _prAplicarCondiccionJanus()
     End Sub
 
