@@ -3,6 +3,7 @@ Imports DevComponents.DotNetBar.SuperGrid
 Imports System.IO
 Imports DevComponents.DotNetBar
 Imports Janus.Windows.GridEX
+Imports DevComponents.DotNetBar.Controls
 
 Public Class F0_AnularFactura
 
@@ -13,6 +14,7 @@ Public Class F0_AnularFactura
     Dim NroAutorizacion As String
     Public _nameButton As String
     Public _tab As SuperTabItem
+    Public _modulo As SideNavItem
 #End Region
 
 #Region "Eventos"
@@ -420,5 +422,10 @@ Public Class F0_AnularFactura
             P_ArmarGrilla(CbAlmacen.Value)
         End If
 
+    End Sub
+
+    Private Sub Bt2Salir_Click(sender As Object, e As EventArgs) Handles Bt2Salir.Click
+        _modulo.Select()
+        _tab.Close()
     End Sub
 End Class

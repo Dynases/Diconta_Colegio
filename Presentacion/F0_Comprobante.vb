@@ -1649,8 +1649,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         objrep.SetDataSource(dt)
         objrep.SetParameterValue("fechaDesde", "")
         objrep.SetParameterValue("fechaHasta", "")
-        objrep.SetParameterValue("titulo", "COLEGIO ANGLO AMERICANO")
-        objrep.SetParameterValue("nit", "")
+        objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO")
+        objrep.SetParameterValue("nit", "1009413027")
         objrep.SetParameterValue("ultimoRegistro", 0)
         objrep.SetParameterValue("Autor", gs_user)
         P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar

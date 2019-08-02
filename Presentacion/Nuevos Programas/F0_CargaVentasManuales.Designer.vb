@@ -178,7 +178,12 @@ Partial Class F0_CargaVentasManuales
         Me.MSuperTabControl.ControlBox.MenuBox.Name = ""
         Me.MSuperTabControl.ControlBox.Name = ""
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
+        Me.MSuperTabControl.SelectedTabIndex = 1
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
+        '
+        'SuperTabItemBuscador
+        '
+        Me.SuperTabItemBuscador.Visible = False
         '
         'PanelBuscador
         '

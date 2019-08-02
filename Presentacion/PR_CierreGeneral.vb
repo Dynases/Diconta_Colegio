@@ -67,7 +67,7 @@ Public Class PR_CierreGeneral
 
                 objrep.SetParameterValue("fechadel", tbFechaDel.Value.ToString("dd/MM/yyyy"))
                 objrep.SetParameterValue("fechaal", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-                objrep.SetParameterValue("titulo", "COLEGIO ANGLO AMERICANO")
+                objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO")
                 objrep.SetParameterValue("sucursal", cbSucursal.Text.ToUpper)
                 'objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
 

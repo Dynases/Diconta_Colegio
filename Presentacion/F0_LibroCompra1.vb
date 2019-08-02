@@ -486,4 +486,9 @@ Public Class F0_LibroCompra1
     Private Sub btReporte_Click(sender As Object, e As EventArgs) Handles btReporte.Click
         _prImprimir()
     End Sub
+
+    Private Sub BtSalir_Click(sender As Object, e As EventArgs) Handles BtSalir.Click
+        _modulo.Select()
+        _tab.Close()
+    End Sub
 End Class

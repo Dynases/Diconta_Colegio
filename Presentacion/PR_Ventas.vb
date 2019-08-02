@@ -62,7 +62,7 @@ Public Class PR_Ventas
 
             objrep.SetParameterValue("fechaDesde", tbFechaDel.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fechaHasta", tbFechaAl.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "ANGLO AMERICANO")
+            objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO")
             'objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
 
             MReportViewer.Show()

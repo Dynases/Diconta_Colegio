@@ -1118,7 +1118,7 @@ Public Class F1_AsientosContables
         objrep.SetParameterValue("fecha", tbFechaI.Value.ToString("dd/MM/yyyy"))
         objrep.SetParameterValue("tc", tbTipoCambio.Value)
         objrep.SetParameterValue("titulo", "COMPROBANTE DE INGRESO")
-        objrep.SetParameterValue("titulo2", "COLEGIO ANGLO AMERICANO ") '+ gs_empresaDesc.ToUpper)
+        objrep.SetParameterValue("titulo2", "CENTRO CULTURAL ANGLO AMERICANO ") '+ gs_empresaDesc.ToUpper)
         objrep.SetParameterValue("glosa", "Sucursal Principal")
         'cargar el numero de comprobante
         Dim dtNum As DataTable = L_prObtenerNumFacturaGeneral(1, tbFechaI.Value.Year, tbFechaI.Value.Month, 1)

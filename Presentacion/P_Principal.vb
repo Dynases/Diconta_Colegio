@@ -687,7 +687,7 @@ Public Class P_Principal
         Ventana.Select()
         Dim frm As New F0_AnularFactura
         frm._nameButton = btVentAnulfact.Name
-
+        frm._modulo = FP_Ventas
         Dim tab3 As SuperTabItem = superTabControl3.CreateTab(frm.Text)
         frm._tab = tab3
         Dim panel As Panel = P_Global._fnCrearPanelVentanas(frm)
@@ -1134,4 +1134,5 @@ Public Class P_Principal
         frm.Show()
         tab3.Text = frm.Text
     End Sub
+
 End Class

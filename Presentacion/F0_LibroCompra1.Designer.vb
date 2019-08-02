@@ -48,6 +48,7 @@ Partial Class F0_LibroCompra1
         Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.Tb2NitRazonSocial = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
+        Me.BtSalir = New DevComponents.DotNetBar.ButtonX()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.BubbleBarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,6 +243,7 @@ Partial Class F0_LibroCompra1
         Me.PanelExAcciones.AutoScroll = True
         Me.PanelExAcciones.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelExAcciones.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelExAcciones.Controls.Add(Me.BtSalir)
         Me.PanelExAcciones.Controls.Add(Me.btReporte)
         Me.PanelExAcciones.Controls.Add(Me.CpExportarExcel)
         Me.PanelExAcciones.Controls.Add(Me.btGenerar)
@@ -279,7 +281,7 @@ Partial Class F0_LibroCompra1
         '
         '
         Me.CpExportarExcel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CpExportarExcel.Location = New System.Drawing.Point(18, 236)
+        Me.CpExportarExcel.Location = New System.Drawing.Point(40, 295)
         Me.CpExportarExcel.Name = "CpExportarExcel"
         Me.CpExportarExcel.PieBorderLight = System.Drawing.Color.Yellow
         Me.CpExportarExcel.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Spoke
@@ -287,7 +289,7 @@ Partial Class F0_LibroCompra1
         Me.CpExportarExcel.ProgressText = "Trabajando"
         Me.CpExportarExcel.ProgressTextColor = System.Drawing.Color.Black
         Me.CpExportarExcel.ProgressTextVisible = True
-        Me.CpExportarExcel.Size = New System.Drawing.Size(150, 150)
+        Me.CpExportarExcel.Size = New System.Drawing.Size(100, 100)
         Me.CpExportarExcel.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP
         Me.CpExportarExcel.TabIndex = 5
         '
@@ -310,7 +312,7 @@ Partial Class F0_LibroCompra1
         Me.btTxt.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground
         Me.btTxt.Image = Global.Presentacion.My.Resources.Resources.txt
         Me.btTxt.ImageFixedSize = New System.Drawing.Size(40, 40)
-        Me.btTxt.Location = New System.Drawing.Point(23, 173)
+        Me.btTxt.Location = New System.Drawing.Point(23, 237)
         Me.btTxt.Name = "btTxt"
         Me.btTxt.Size = New System.Drawing.Size(150, 50)
         Me.btTxt.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -612,6 +614,19 @@ Partial Class F0_LibroCompra1
         Me.LabelX5.TextAlignment = System.Drawing.StringAlignment.Far
         Me.LabelX5.Visible = False
         '
+        'BtSalir
+        '
+        Me.BtSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.BtSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground
+        Me.BtSalir.Image = Global.Presentacion.My.Resources.Resources.atras
+        Me.BtSalir.ImageFixedSize = New System.Drawing.Size(40, 40)
+        Me.BtSalir.Location = New System.Drawing.Point(23, 176)
+        Me.BtSalir.Name = "BtSalir"
+        Me.BtSalir.Size = New System.Drawing.Size(150, 50)
+        Me.BtSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.BtSalir.TabIndex = 6
+        Me.BtSalir.Text = "    Salir"
+        '
         'F0_LibroCompra1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -675,4 +690,5 @@ Partial Class F0_LibroCompra1
     Friend WithEvents cbMes As Janus.Windows.GridEX.EditControls.MultiColumnCombo
     Friend WithEvents cbAno As Janus.Windows.GridEX.EditControls.MultiColumnCombo
     Friend WithEvents dgjLibroCompra As Janus.Windows.GridEX.GridEX
+    Friend WithEvents BtSalir As DevComponents.DotNetBar.ButtonX
 End Class

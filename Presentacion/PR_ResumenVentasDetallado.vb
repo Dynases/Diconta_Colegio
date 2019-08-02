@@ -130,7 +130,7 @@ Public Class PR_ResumenVentasDetallado
 
             objrep.SetParameterValue("fecha1", tbfec1.Value.ToString("dd/MM/yyyy"))
             objrep.SetParameterValue("fecha2", tbfec2.Value.ToString("dd/MM/yyyy"))
-            objrep.SetParameterValue("titulo", "COLEGIO ALNGLO AMERICANO")
+            objrep.SetParameterValue("titulo", "CENTRO CULTURAL ANGLO AMERICANO")
             objrep.SetParameterValue("sucursal", cbSucursal.Text.ToUpper)
             'objrep.SetParameterValue("nit", gs_empresaNit.ToUpper)
 
