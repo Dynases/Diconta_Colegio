@@ -1642,7 +1642,19 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     Private Sub _prImprimir()
         Dim objrep As New R_Comprobante2
         Dim dt As New DataTable
+        Dim _Ds As New DataSet
+        Dim _TotalLi As Decimal
+        Dim _Literal, _TotalDecimal As String
         dt = L_prComprobanteReporteComprobante(tbNumi.Text)
+
+        Dim sumMONTO As Object = dt.Compute("SUM(obdebebs)", Nothing)
+        'Literal 
+        _TotalLi = sumMONTO
+        _TotalDecimal = _TotalLi - Math.Truncate(_TotalLi)
+        '_TotalDecimal2 = CDbl(_TotalDecimal) * 100
+        Dim pdecimal() As String
+        pdecimal = Split(_TotalDecimal, ".")
+        _Literal = NumLiteral(CDbl(_TotalLi) - CDbl(_TotalDecimal)) + " CON " + IIf(pdecimal(1).Equals("0"), "00", pdecimal(1)) + "/100 BOLIVIANOS"
 
         'ahora lo mando al visualizador
         P_Global.Visualizador = New Visualizador
@@ -1653,11 +1665,65 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         objrep.SetParameterValue("nit", "1009413027")
         objrep.SetParameterValue("ultimoRegistro", 0)
         objrep.SetParameterValue("Autor", gs_user)
+        objrep.SetParameterValue("literal", _Literal)
         P_Global.Visualizador.CRV1.ReportSource = objrep 'Comentar
         P_Global.Visualizador.Show() 'Comentar
         P_Global.Visualizador.BringToFront() 'Comentar
 
     End Sub
+    Public Function NumLiteral(ByVal value As Double) As String
+        Select Case value
+            Case 0 : NumLiteral = "CERO"
+            Case 1 : NumLiteral = "UN"
+            Case 2 : NumLiteral = "DOS"
+            Case 3 : NumLiteral = "TRES"
+            Case 4 : NumLiteral = "CUATRO"
+            Case 5 : NumLiteral = "CINCO"
+            Case 6 : NumLiteral = "SEIS"
+            Case 7 : NumLiteral = "SIETE"
+            Case 8 : NumLiteral = "OCHO"
+            Case 9 : NumLiteral = "NUEVE"
+            Case 10 : NumLiteral = "DIEZ"
+            Case 11 : NumLiteral = "ONCE"
+            Case 12 : NumLiteral = "DOCE"
+            Case 13 : NumLiteral = "TRECE"
+            Case 14 : NumLiteral = "CATORCE"
+            Case 15 : NumLiteral = "QUINCE"
+            Case Is < 20 : NumLiteral = "DIECI" & NumLiteral(value - 10)
+            Case 20 : NumLiteral = "VEINTE"
+            Case Is < 30 : NumLiteral = "VEINTI" & NumLiteral(value - 20)
+            Case 30 : NumLiteral = "TREINTA"
+            Case 40 : NumLiteral = "CUARENTA"
+            Case 50 : NumLiteral = "CINCUENTA"
+            Case 60 : NumLiteral = "SESENTA"
+            Case 70 : NumLiteral = "SETENTA"
+            Case 80 : NumLiteral = "OCHENTA"
+            Case 90 : NumLiteral = "NOVENTA"
+            Case Is < 100 : NumLiteral = NumLiteral(Int(value \ 10) * 10) & " Y " & NumLiteral(value Mod 10)
+            Case 100 : NumLiteral = "CIEN"
+            Case Is < 200 : NumLiteral = "CIENTO " & NumLiteral(value - 100)
+            Case 200, 300, 400, 600, 800 : NumLiteral = NumLiteral(Int(value \ 100)) & "CIENTOS"
+            Case 500 : NumLiteral = "QUINIENTOS"
+            Case 700 : NumLiteral = "SETECIENTOS"
+            Case 900 : NumLiteral = "NOVECIENTOS"
+            Case Is < 1000 : NumLiteral = NumLiteral(Int(value \ 100) * 100) & " " & NumLiteral(value Mod 100)
+            Case 1000 : NumLiteral = "MIL"
+            Case Is < 2000 : NumLiteral = "MIL " & NumLiteral(value Mod 1000)
+            Case Is < 1000000 : NumLiteral = NumLiteral(Int(value \ 1000)) & " MIL"
+                If value Mod 1000 Then NumLiteral = NumLiteral & " " & NumLiteral(value Mod 1000)
+            Case 1000000 : NumLiteral = "UN MILLON"
+            Case Is < 2000000 : NumLiteral = "UN MILLON " & NumLiteral(value Mod 1000000)
+            Case Is < 1000000000000.0# : NumLiteral = NumLiteral(Int(value / 1000000)) & " MILLONES "
+                If (value - Int(value / 1000000) * 1000000) Then NumLiteral = NumLiteral & " " & NumLiteral(value - Int(value / 1000000) * 1000000)
+            Case 1000000000000.0# : NumLiteral = "UN BILLON"
+            Case Is < 2000000000000.0# : NumLiteral = "UN BILLON " & NumLiteral(value - Int(value / 1000000000000.0#) * 1000000000000.0#)
+            Case Else : NumLiteral = NumLiteral(Int(value / 1000000000000.0#)) & " BILLONES"
+                If (value - Int(value / 1000000000000.0#) * 1000000000000.0#) Then NumLiteral = NumLiteral & " " & NumLiteral(value - Int(value / 1000000000000.0#) * 1000000000000.0#)
+        End Select
+
+    End Function
+
+
 
     Private Sub _prCargarOpcionesDeCuentasAutomaticas()
 

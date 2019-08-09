@@ -214,7 +214,7 @@ Partial Class F0_Comprobante
         Me.PanelToolBar1.Controls.Add(Me.ButtonX3)
         Me.PanelToolBar1.Controls.Add(Me.ButtonX1)
         Me.PanelToolBar1.Controls.Add(Me.ButtonX2)
-        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelToolBar1.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelToolBar1.Size = New System.Drawing.Size(779, 72)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnNuevo, 0)
         Me.PanelToolBar1.Controls.SetChildIndex(Me.btnModificar, 0)
@@ -230,7 +230,7 @@ Partial Class F0_Comprobante
         'btnSalir
         '
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Size = New System.Drawing.Size(66, 72)
         '
         'btnGrabar
