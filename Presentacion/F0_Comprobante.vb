@@ -1654,7 +1654,8 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
         '_TotalDecimal2 = CDbl(_TotalDecimal) * 100
         Dim pdecimal() As String
         pdecimal = Split(_TotalDecimal, ".")
-        _Literal = NumLiteral(CDbl(_TotalLi) - CDbl(_TotalDecimal)) + " CON " + IIf(pdecimal(1).Equals("0"), "00", pdecimal(1)) + "/100 BOLIVIANOS"
+
+        _Literal = NumLiteral(CDbl(_TotalLi) - CDbl(_TotalDecimal)) + "  " + IIf(pdecimal(1).Equals("0"), "00", pdecimal(1)) + "/100 BOLIVIANOS"
 
         'ahora lo mando al visualizador
         P_Global.Visualizador = New Visualizador
@@ -1674,7 +1675,7 @@ ControlChars.Lf & "Stack Trace:" & ControlChars.Lf & e.StackTrace
     Public Function NumLiteral(ByVal value As Double) As String
         Select Case value
             Case 0 : NumLiteral = "CERO"
-            Case 1 : NumLiteral = "UN"
+            Case 1 : NumLiteral = "UNO"
             Case 2 : NumLiteral = "DOS"
             Case 3 : NumLiteral = "TRES"
             Case 4 : NumLiteral = "CUATRO"
